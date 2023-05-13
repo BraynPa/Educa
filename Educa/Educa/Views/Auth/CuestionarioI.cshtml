@@ -73,15 +73,23 @@
 
 
       </div>
-      <div class="complete_text">¡Has completado la encuesta!</div>
-      <div class="score_text">
-          <!-- Aquí he insertado Score Result de JavaScript-->
+      <div class="complete_text">¡Has completado la encuesta !</div>
+      <form action="/auth/cuestionarioI" method="POST">
+          <div class="score_text">
+          <input class="answer" type="text" id="a" name="a" disable>
+          <input class="answer" type="text" id="b" name="b" disable>
+          <input class="answer" type="text" id="c" name="c" disable>
+          <input class="answer" type="text" id="d" name="d" disable>
+          <input class="answer" type="text" id="e" name="e" disable>
+          <input class="answer" type="text" id="f" name="f" disable>
+          <input class="answer" type="text" name="user" value="@ViewBag.Nombre" disable>
       </div>
       <div class="buttons">
-          <button class="restart">Cuestionario de repetición</button>
-          <a href="/auth/login"><button class="quit">Siguiente </button></a>
-          
+          <button class="restart second" disabled>Cuestionario de repetición</button>
+          <button class="quit">Siguiente </button>
       </div>
+    </form>
+      
   </div>
 
   <!-- Dentro de este archivo JavaScript, solo he insertado preguntas y opciones. -->

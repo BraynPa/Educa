@@ -16,6 +16,20 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
 }
+.answer {
+    border: 0;
+    outline: none;
+    background-color: #fff;
+    color: #fff;
+    cursor: default;
+}
+    .answer:hover {
+        border: 0;
+        outline: none;
+        background-color: #fff;
+        color: #fff;
+        cursor: default;
+    }
 
 ::selection {
     color: #fff;
@@ -378,7 +392,20 @@ footer {
     .buttons button.restart:hover {
         background: #0263ca;
     }
-
+.buttons button.second {
+    color: #fff;
+    background-color: #fff;
+    border: none;
+    text-decoration: none;
+    cursor: default;
+}
+    .buttons button.second:hover {
+        color: #fff;
+        background-color: #fff;
+        border: none;
+        text-decoration: none;
+        cursor: default;
+    }
 .buttons button.quit {
     color: #007bff;
     background: #fff;

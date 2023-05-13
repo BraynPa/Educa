@@ -1,15 +1,15 @@
 ﻿<div class="projects-section-header">
-        <p>Letras - Números</p>
-        <p class="time">Abril, 21</p>
+        <p>@ViewBag.Subtema</p>
+        <p class="time">@ViewBag.Fecha</p>
       </div>
       <div class="projects-section-line">
         <div class="projects-status">
           <div class="item-status">
-            <span class="status-number">7</span>
+            <span class="status-number">@ViewBag.Progreso</span>
             <span class="status-type">En Progreso</span>
           </div>
           <div class="item-status">
-            <span class="status-number">20</span>
+            <span class="status-number">@ViewBag.Total</span>
             <span class="status-type">Lecciones Totales</span>
           </div>
         </div>
@@ -33,73 +33,40 @@
         </div>
       </div>
       <div class="project-boxes jsGridView">
-        <div class="project-box-wrapper">
-          <div class="project-box" style="background-color: #fee4cb;">
+        
+        @foreach (var item in ViewBag.Lecciones)
+    {
+       <div class="project-box-wrapper">
+          <div class="project-box" style="background-color: @item.Lecciones.Colores.ColorLight;">
             <div class="project-box-header">
-              <span>Abril 21, 2023</span>
+              <span>@item.UltFechaModif</span>
               <div class="more-wrapper">
-                <button class="project-btn-more">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18l6-6l-6-6"/></svg>
-                    <circle cx="12" cy="12" r="1" />
-                    <circle cx="12" cy="5" r="1" />
-                    <circle cx="12" cy="19" r="1" /></svg>
-                </button>
+                <a href="/home/pagLecciones?leccion=@item.Lecciones.Id" class="project-btn-more">
+                    <img src="~/Images/Curso/NextItem.png"
+                    alt="MDN logo" width="20" height="20"/>
+                </a>
+              </div>
+            </div>
+            <div class="project-box-content-header">
+              <p class="box-content-header">@item.Lecciones.TituloLeccion</p>
+              <p class="box-content-subheader">@item.Lecciones.TipoLeccion</p>
+            </div>
+            <div class="box-progress-wrapper">
+              <p class="box-progress-header">Progreso</p>
+              <div class="box-progress-bar">
+                <span class="box-progress" style="width: @item.PorcentajeAvance%; background-color: @item.Lecciones.Colores.ColorBlack"></span>
+              </div>
+              <p class="box-progress-percentage">@item.PorcentajeAvance%</p>
+            </div>
+            <div class="project-box-footer">
+              <div class="participants">
+                <img src="@item.Lecciones.LinkImgLeccion" alt="participant">
+              </div>
+              <div class="days-left" style="color: black;">
+                Recien Empiezas
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="project-box-content-header">
-          <p class="box-content-header">Vocales</p>
-          <p class="box-content-subheader">Forma y Sonido</p>
-        </div>
-        <div class="box-progress-wrapper">
-          <p class="box-progress-header">Progreso</p>
-          <div class="box-progress-bar">
-            <span class="box-progress" style="width: 60%; background-color: #ff942e"></span>
-          </div>
-          <p class="box-progress-percentage">60%</p>
-        </div>
-        <div class="project-box-footer">
-          <div class="participants">
-            <img src="https://images.vexels.com/media/users/3/189789/isolated/preview/78f2f422b7b634a10e2847020605a900-icono-de-bloques-de-letras.png" alt="participant">
-            <img src="https://cdn-icons-png.flaticon.com/512/453/453392.png" alt="participant">
-          </div>
-          <div class="days-left" style="color: #ff942e;">
-            Sigue así
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="project-box-wrapper">
-      <div class="project-box" style="background-color: #e9e7fd;">
-        <div class="project-box-header">
-          <span>Abril 20, 2023</span>
-          <div class="more-wrapper">
-            <button class="project-btn-more">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18l6-6l-6-6"/></svg>
-                <circle cx="12" cy="12" r="1" />
-                <circle cx="12" cy="5" r="1" />
-                <circle cx="12" cy="19" r="1" /></svg>
-            </button>
-          </div>
-        </div>
-        <div class="project-box-content-header">
-          <p class="box-content-header">Números</p>
-          <p class="box-content-subheader">Identificar</p>
-        </div>
-        <div class="box-progress-wrapper">
-          <p class="box-progress-header">Progreso</p>
-          <div class="box-progress-bar">
-            <span class="box-progress" style="width: 50%; background-color: #4f3ff0"></span>
-          </div>
-          <p class="box-progress-percentage">50%</p>
-        </div>
-        <div class="project-box-footer">
-          <div class="participants">
-            <img src="https://cdn-icons-png.flaticon.com/512/68/68216.png" alt="participant">
-          </div>
-          <div class="days-left" style="color: #4f3ff0;">
-            Ya vas a la mitad
-          </div>
-        </div>
-      </div>
-    </div>
+        </div> 
+    }
   </div>

@@ -1,7 +1,25 @@
+using Educa.BD;
+using Educa.Repository;
+using Educa.Service;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options => {
+        options.LoginPath = "/auth/login";
+    });
+builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<EducaContext>(
+    options => options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection"))
+);
+builder.Services.AddTransient<ICookieAuthService, CookieAuthService>();
+builder.Services.AddTransient<IEducaContext, EducaContext>();
+builder.Services.AddTransient<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddTransient<IDatosRepository, DatosRepository>();
 
 var app = builder.Build();
 
@@ -18,6 +36,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

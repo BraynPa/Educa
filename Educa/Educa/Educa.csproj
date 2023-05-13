@@ -7,17 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Repository\" />
-    <Folder Include="Views\Home\Questions\Exam\" />
-    <Folder Include="Views\Home\Questions\Questionnaire\" />
-    <Folder Include="Views\Home\SubTemas\WordEasy\Ejercicios\" />
-    <Folder Include="Views\Home\SubTemas\Rhyme\Ejercicios\" />
-    <Folder Include="Views\Home\SubTemas\Phrases\Ejercicios\" />
-    <Folder Include="Views\Home\SubTemas\Syllable\Ejercicios\" />
-    <Folder Include="Views\Home\SubTemas\Instructions\Ejercicios\" />
-    <Folder Include="Views\Home\SubTemas\Stories\Books\" />
-    <Folder Include="Views\Home\SubTemas\MayusMin\Ejercicios\" />
-    <Folder Include="Views\Home\SubTemas\LetterNum\Ejercicios\" />
+    <Folder Include="Views\Questions\Exam\" />
+    <Folder Include="Views\Questions\Questionnaire\" />
   </ItemGroup>
 
   <ItemGroup>

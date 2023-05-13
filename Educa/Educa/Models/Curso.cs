@@ -10,5 +10,6 @@
         public Grado? Grados { get; set; }
         public Color? Colores { get; set; }
         public List<Tema>? Temas { get; set; }
+        public List<UsuarioCurso>? UsuarioCursos { get; set; }
     }
 }

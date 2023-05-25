@@ -1,6 +1,7 @@
 ﻿using Educa.Models;
 using Educa.Repository;
 using Educa.Service;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -121,12 +122,61 @@ namespace Educa.Controllers
 
             if (!ModelState.IsValid)
             {
-                return RedirectToAction("Registrar", "Auth", usuario);
+                return RedirectToAction("Signin", "Auth", usuario);
             }
 
             _cookieAuthService.SetHttpContext(HttpContext);
             _usuario.AgregarUsuario(usuario);
-            return RedirectToAction("CuestionarioI", "Auth", new { user = usuario.User });
+            return RedirectToAction("AvatarUser", "Auth", new { user = usuario.User });
+        }
+        [HttpGet]
+        public IActionResult AvatarUser(string user)
+        {
+            ViewBag.Nombre = user;
+            _cookieAuthService.SetHttpContext(HttpContext);
+            return View();
+        }
+        [HttpGet]
+        public IActionResult Avatar(string user, int avatar_id)
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            var usuario = _usuario.ObtenerUsuario(user);
+
+            switch (avatar_id)
+            {
+                case 0:
+                    usuario.Avatar = "/Images/Home/Avatar1.png";
+                    _usuario.AstualizarUsuario(usuario);
+                    break;
+                case 1:
+                    usuario.Avatar = "/Images/Home/Avatar1.png";
+                    _usuario.AstualizarUsuario(usuario);
+                    break;
+                case 2:
+                    usuario.Avatar = "/Images/Home/Avatar2.png";
+                    _usuario.AstualizarUsuario(usuario);
+                    break;
+                case 3:
+                    usuario.Avatar = "/Images/Home/Avatar3.png";
+                    _usuario.AstualizarUsuario(usuario);
+                    break;
+                case 4:
+                    usuario.Avatar = "/Images/Home/Avatar4.png";
+                    _usuario.AstualizarUsuario(usuario);
+                    break;
+                case 5:
+                    usuario.Avatar = "/Images/Home/Avatar5.png";
+                    _usuario.AstualizarUsuario(usuario);
+                    break;
+                case 6:
+                    usuario.Avatar = "/Images/Home/Avatar6.png";
+                    _usuario.AstualizarUsuario(usuario);
+                    break;
+                default:
+                    // code block
+                    break;
+            }
+            return RedirectToAction("CuestionarioI", "Auth", new { user = user });
         }
         [HttpGet]
         public IActionResult CuestionarioI(string user)
@@ -149,6 +199,31 @@ namespace Educa.Controllers
             _cookieAuthService.SetHttpContext(HttpContext);
             return View();
         }
-
+        [HttpGet]
+        public IActionResult Logout(string user)
+        {
+            ViewBag.Nombre = user;
+            DateTime fechaHora = DateTime.Now;
+            var hora = fechaHora.ToString("HH");
+            int result = Int32.Parse(hora);
+            if (result <= 7 && result >= 6)
+            {
+                ViewBag.Hora = "dusk";
+            }
+            if (result <= 19 && result >= 18)
+            {
+                ViewBag.Hora = "sunset";
+            }
+            if ((result <= 24 && result > 19) || (result < 6 && result >= 0))
+            {
+                ViewBag.Hora = "night";
+            }
+            if (result < 18 && result > 7)
+            {
+                ViewBag.Hora = "day";
+            }
+            HttpContext.SignOutAsync();
+            return View();
+        }
     }
 }

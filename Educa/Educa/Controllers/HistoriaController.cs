@@ -1,83 +1,45 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Educa.Repository;
+using Educa.Service;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Educa.Controllers
 {
     public class HistoriaController : Controller
     {
-        // GET: HistoriaController
-        public ActionResult Index()
+        private readonly IUsuarioRepository _context;
+        private readonly ICookieAuthService _cookieAuthService;
+        private readonly IDatosRepository _repository;
+        public HistoriaController(IUsuarioRepository _context, ICookieAuthService _cookieAuthService, IDatosRepository _repository)
         {
+            this._context = _context;
+            this._cookieAuthService = _cookieAuthService;
+            this._repository = _repository;
+            _cookieAuthService.SetHttpContext(HttpContext);
+        }
+        public IActionResult HistoriaIndex()
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            var nombre = _cookieAuthService.LoggedUser().User;
+            ViewBag.Libros = _repository.LibrosU(nombre);
+            ViewBag.Avatar = _context.AvatarUsuario(nombre);
             return View();
         }
-
-        // GET: HistoriaController/Details/5
-        public ActionResult Details(int id)
+        public IActionResult PreHistoria(string libro)
         {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            ViewBag.Libro = libro;
             return View();
         }
-
-        // GET: HistoriaController/Create
-        public ActionResult Create()
+        public IActionResult Tomas()
         {
+            _cookieAuthService.SetHttpContext(HttpContext);
             return View();
         }
-
-        // POST: HistoriaController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public IActionResult ElPollitoAventurero()
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: HistoriaController/Edit/5
-        public ActionResult Edit(int id)
-        {
+            _cookieAuthService.SetHttpContext(HttpContext);
             return View();
-        }
-
-        // POST: HistoriaController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: HistoriaController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: HistoriaController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
         }
     }
 }

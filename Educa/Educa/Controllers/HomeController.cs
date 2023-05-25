@@ -32,6 +32,7 @@ namespace Educa.Controllers
             _cookieAuthService.SetHttpContext(HttpContext);
             var nombre = _cookieAuthService.LoggedUser().User;
             ViewBag.Nombre = nombre;
+            ViewBag.Avatar = _context.AvatarUsuario(nombre);
             ViewBag.Cursos = _repository.CursosU(nombre);
             ViewBag.Total = _repository.NumeroCursos();
             ViewBag.Progreso = _repository.NumeroCursosEnProgreso(nombre);
@@ -46,6 +47,7 @@ namespace Educa.Controllers
             _cookieAuthService.SetHttpContext(HttpContext);
             var nombre = _cookieAuthService.LoggedUser().User;
             ViewBag.Nombre = nombre;
+            ViewBag.Avatar = _context.AvatarUsuario(nombre);
             ViewBag.Curso = _repository.ObtenerNombreCurso(curso);
             ViewBag.Temas = _repository.TemasU(nombre,curso);
             ViewBag.Total = _repository.NumeroTemas(curso);
@@ -61,6 +63,7 @@ namespace Educa.Controllers
             _cookieAuthService.SetHttpContext(HttpContext);
             var nombre = _cookieAuthService.LoggedUser().User;
             ViewBag.Nombre = nombre;
+            ViewBag.Avatar = _context.AvatarUsuario(nombre);
             ViewBag.Tema = _repository.ObtenerNombreTema(tema);
             ViewBag.Subtemas = _repository.SubtemasU(nombre, tema);
             ViewBag.Total = _repository.NumeroSubtemas(tema);
@@ -77,9 +80,10 @@ namespace Educa.Controllers
             var nombre = _cookieAuthService.LoggedUser().User;
             if(_repository.ObtenerNombreSubtema(subtema) == "Historias Sencillas")
             {
-                return RedirectToAction("HistoriaIndex", "Home");
+                return RedirectToAction("HistoriaIndex", "Historia");
             }
             ViewBag.Nombre = nombre;
+            ViewBag.Avatar = _context.AvatarUsuario(nombre);
             ViewBag.Subtema = _repository.ObtenerNombreSubtema(subtema);
             ViewBag.Lecciones = _repository.LeccionesU(nombre, subtema);
             ViewBag.Total = _repository.NumeroLecciones(subtema);
@@ -90,13 +94,7 @@ namespace Educa.Controllers
             ViewBag.Fecha = FechaFormateada;
             return View();
         }
-        public IActionResult HistoriaIndex()
-        {
-            _cookieAuthService.SetHttpContext(HttpContext);
-            var nombre = _cookieAuthService.LoggedUser().User;
-            ViewBag.Libros = _repository.LibrosU(nombre);
-            return View();
-        }
+        
         public IActionResult EducaNinja()
         {
             _cookieAuthService.SetHttpContext(HttpContext);
@@ -106,8 +104,18 @@ namespace Educa.Controllers
         {
             _cookieAuthService.SetHttpContext(HttpContext);
             ViewBag.Nombre = _cookieAuthService.LoggedUser().User;
+            ViewBag.Avatar = _context.AvatarUsuario(_cookieAuthService.LoggedUser().User);
             return View();
         }
+        public IActionResult PagLecciones(int leccion)
+        {
+            if(leccion == 1)
+            {
+                return RedirectToAction("Paginas", "Leccion1Pag1");
+            }
+            return View();
+        }
+        
 
         public IActionResult Privacy()
         {

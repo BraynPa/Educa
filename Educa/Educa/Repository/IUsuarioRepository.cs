@@ -7,11 +7,14 @@ namespace Educa.Repository
     public interface IUsuarioRepository
     {
         public Usuario ObtenerUsuarioLogin(Claim claim);
+        public Usuario ObtenerUsuario(string user);
         public Usuario EncontrarUsuario(String username, String password);
         public Dictionary<int, String> IndicesPorId();
         public bool BuscarUsuarioUser(String user);
         public void AgregarUsuario(Usuario usuario);
+        public void AstualizarUsuario(Usuario usuario);
         public int EncontrarIdUsuario(string user);
+        public string AvatarUsuario(string user);
 
     }
     public class UsuarioRepository : IUsuarioRepository
@@ -30,10 +33,21 @@ namespace Educa.Repository
             var Usuario = _context._usuario.FirstOrDefault(o => o.User == username && o.Password == password);
             return Usuario;
         }
+        public string AvatarUsuario(string user)
+        {
+            var Usuario = _context._usuario.FirstOrDefault(o => o.User == user);
+            return Usuario.Avatar;
+        }
+
         public int EncontrarIdUsuario(string user)
         {
             var Usuario = _context._usuario.FirstOrDefault(o => o.User == user);
             return Usuario.Id;
+        }
+        public void AstualizarUsuario(Usuario usuario)
+        {
+            _context._usuario.Update(usuario);
+            _context.SaveChanges();
         }
 
         public Dictionary<int, string> IndicesPorId()
@@ -53,6 +67,11 @@ namespace Educa.Repository
         {
             var user = _context._usuario.FirstOrDefault(o => o.User == claim.Value);
             return user;
+        }
+        public Usuario ObtenerUsuario(String user)
+        {
+            var usuario = _context._usuario.FirstOrDefault(o => o.User == user);
+            return usuario;
         }
         public bool BuscarUsuarioUser(String user)
         {

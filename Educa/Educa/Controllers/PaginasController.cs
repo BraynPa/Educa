@@ -47,5 +47,10 @@ namespace Educa.Controllers
             _cookieAuthService.SetHttpContext(HttpContext);
             return View();
         }
+        public IActionResult Leccion2Pag1()
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            return View();
+        }
     }
 }

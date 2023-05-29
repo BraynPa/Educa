@@ -12,6 +12,8 @@
         public Color? Colores { get; set; }
         public Subtema? Subtemas { get; set; }
         public List<Libro>? Libros { get; set; }
+        public List<PagLeccion>? PagLecciones { get; set; }
         public List<UsuarioLeccion>? UsuarioLecciones { get; set; }
+        public List<Ejercicio>? Ejercicios { get; set; }
     }
 }

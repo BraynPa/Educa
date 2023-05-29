@@ -8,7 +8,6 @@
         public String? DescripcionPagLeccion { get; set; }
         public int IdLeccion { get; set; }
         public Leccion? Lecciones { get; set; }
-        public List<Ejercicio>? Ejercicios { get; set; }
         public List<UsuarioLeccionPag> UsuarioLeccionPaginas { get; set; }
     }
 }

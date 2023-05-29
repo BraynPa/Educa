@@ -10,10 +10,7 @@ namespace Educa.BD.Maps
             builder.ToTable("PagLeccion");
             builder.HasKey(o => o.Id);
 
-            builder.HasMany(o => o.Ejercicios).
-            WithOne(o => o.PagLecciones).
-            HasForeignKey(o => o.IdPagLeccion);
-
+            
             builder.HasMany(o => o.UsuarioLeccionPaginas).
             WithOne(o => o.PagLecciones).
             HasForeignKey(o => o.IdPagLeccion);

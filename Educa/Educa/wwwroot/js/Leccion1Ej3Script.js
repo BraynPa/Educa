@@ -15,7 +15,7 @@ let tresAudio = new Audio('/sounds/Leccion1/tres.wav');
 let cuatroAudio = new Audio('/sounds/Leccion1/cuatro.wav');
 let cincoAudio = new Audio('/sounds/Leccion1/cinco.wav');
 let seisAudio = new Audio('/sounds/Leccion1/seis.wav');
-let sieteAudio = new Audio('/sounds/Leccion1s/siete.wav');
+let sieteAudio = new Audio('/sounds/Leccion1/siete.wav');
 let ochoAudio = new Audio('/sounds/Leccion1/ocho.wav');
 let nueveAudio = new Audio('/sounds/Leccion1/nueve.wav');
 let puntos = 0;
@@ -57,15 +57,16 @@ function drop(ev) {
     }
     if (arreglo[0] != "" && arreglo[1] != "" && arreglo[2] != "" && arreglo[3] != "" && arreglo[4] != "" && arreglo[5] != "" && arreglo[6] != "" && arreglo[7] != "" && arreglo[8] != "" && arreglo[9] != "") {
         if (arreglo[0] == "cinco" && arreglo[1] == "nueve" && arreglo[2] == "seis" && arreglo[3] == "uno" && arreglo[4] == "dos" && arreglo[5] == "cuatro" && arreglo[6] == "siete" && arreglo[7] == "tres" && arreglo[8] == "ocho" && arreglo[9] == "cero") {
-            link = `/home/lecciones?subtema=1`;
+            puntos = 5;
+            link = `/paginas/Leccion1Finish?puntos=${puntos}`;
             document.getElementById("success-box").style.visibility = 'visible';
             document.getElementById("container-1").style.visibility = 'hidden';
 
             winAudio.play();
-            puntos = 5;
+            
 
         } else {
-            link = `/home/lecciones?subtema=1`;
+            link = `/paginas/Leccion1Finish?puntos=${puntos}`;
             document.getElementById("error-box").style.visibility = 'visible';
             loseAudio.play();
         }

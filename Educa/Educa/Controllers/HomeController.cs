@@ -117,6 +117,22 @@ namespace Educa.Controllers
             {
                 return RedirectToAction("Leccion2Pag1", "Paginas");
             }
+            else if (leccion == 3)
+            {
+                return RedirectToAction("Leccion3Pag1", "Paginas");
+            }
+            else if (leccion == 4)
+            {
+                return RedirectToAction("Leccion4Pag1", "Paginas");
+            }
+            else if (leccion == 5)
+            {
+                return RedirectToAction("Leccion5Pag1", "Paginas");
+            }
+            else if (leccion == 6)
+            {
+                return RedirectToAction("Leccion6Pag1", "Paginas");
+            }
             return View();
         }
         

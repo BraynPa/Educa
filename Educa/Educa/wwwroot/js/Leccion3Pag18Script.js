@@ -26,13 +26,13 @@ const brands = [
   },
   
 ];
-let aAudio = new Audio('./sounds/Leccion3/Pag18/lla.wav');
-let eAudio = new Audio('./sounds/Leccion3/Pag18/lle.wav');
-let iAudio = new Audio('./sounds/Leccion3/Pag18/lli.wav');
-let oAudio = new Audio('./sounds/Leccion3/Pag18/llo.wav');
-let uAudio = new Audio('./sounds/Leccion3/Pag18/llu.wav');
-let rightAudio = new Audio('./sounds/right.wav');
-let wrongAudio = new Audio('./sounds/wrong.wav');
+let aAudio = new Audio('/sounds/Leccion3/Pag18/lla.wav');
+let eAudio = new Audio('/sounds/Leccion3/Pag18/lle.wav');
+let iAudio = new Audio('/sounds/Leccion3/Pag18/lli.wav');
+let oAudio = new Audio('/sounds/Leccion3/Pag18/llo.wav');
+let uAudio = new Audio('/sounds/Leccion3/Pag18/llu.wav');
+let rightAudio = new Audio('/sounds/right.wav');
+let wrongAudio = new Audio('/sounds/wrong.wav');
 let correct = 0;
 let total = 0;
 let audio = null;
@@ -59,7 +59,7 @@ function initiateGame() {
   // Create "draggable-items" and append to DOM
   for(let i=0; i<randomDraggableBrands.length; i++) {
     draggableItems.insertAdjacentHTML("beforeend", `
-      <img class="draggable" src="./Images/Leccion/Leccion3/Pag18/${randomDraggableBrands[i].iconName}.png" width="48" height="48" draggable="true" style="color: ${randomDraggableBrands[i].color};" id="${randomDraggableBrands[i].iconName}"></img>
+      <img class="draggable" src="/Images/Leccion/Leccion3/Pag18/${randomDraggableBrands[i].iconName}.png" width="48" height="48" draggable="true" style="color: ${randomDraggableBrands[i].color};" id="${randomDraggableBrands[i].iconName}"></img>
     `);
   }
   
@@ -131,7 +131,7 @@ function drop(event) {
     event.target.classList.add("dropped");
     draggableElement.classList.add("dragged");
     draggableElement.setAttribute("draggable", "false");
-    event.target.innerHTML = `<img src="./Images/Leccion/Leccion3/Pag18/${draggableElementBrand}.png" width="48" height="48" style="color: ${draggableElement.style.color};"></img>`;
+    event.target.innerHTML = `<img src="/Images/Leccion/Leccion3/Pag18/${draggableElementBrand}.png" width="48" height="48" style="color: ${draggableElement.style.color};"></img>`;
     if(draggableElementBrand == "lla"){
       aAudio.play();
     }else if(draggableElementBrand == "lle"){
@@ -166,7 +166,7 @@ function drop(event) {
 // Other Event Listeners
 playAgainBtn.addEventListener("click", playAgainBtnClick);
 function playAgainBtnClick() {
-  window.location = "/paginas/leccion1Pag3"
+  window.location = "/paginas/leccion3Pag19"
 }
 
 // Auxiliary functions

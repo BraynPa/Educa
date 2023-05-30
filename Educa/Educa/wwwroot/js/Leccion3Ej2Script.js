@@ -26,19 +26,20 @@ const brands = [
   },
   
 ];
-let aAudio = new Audio('./sounds/Leccion3/Pag7/ba.wav');
-let eAudio = new Audio('./sounds/Leccion3/Pag9/cha.wav');
-let iAudio = new Audio('./sounds/Leccion3/Pag16/ke.wav');
-let oAudio = new Audio('./sounds/Leccion3/Pag22/pu.wav');
-let uAudio = new Audio('./sounds/Leccion3/Pag29/xa.wav');
+let aAudio = new Audio('/sounds/Leccion3/Pag7/ba.wav');
+let eAudio = new Audio('/sounds/Leccion3/Pag9/cha.wav');
+let iAudio = new Audio('/sounds/Leccion3/Pag16/ke.wav');
+let oAudio = new Audio('/sounds/Leccion3/Pag22/pu.wav');
+let uAudio = new Audio('/sounds/Leccion3/Pag29/xa.wav');
 let mostrarPuntos = document.getElementById('puntos');
-let rightAudio = new Audio('./sounds/right.wav');
-let wrongAudio = new Audio('./sounds/wrong.wav');
-let winAudio = new Audio('./sounds/win.wav');
+let rightAudio = new Audio('/sounds/right.wav');
+let wrongAudio = new Audio('/sounds/wrong.wav');
+let winAudio = new Audio('/sounds/win.wav');
 let correct = 0;
 let total = 0;
 let audio = null;
 let puntos = 5;
+let link = null;
 document.getElementById("success-box").style.visibility = 'hidden';
 const totalDraggableItems = 5;
 const totalMatchingPairs = 5; // Should be <= totalDraggableItems
@@ -63,7 +64,7 @@ function initiateGame() {
   // Create "draggable-items" and append to DOM
   for(let i=0; i<randomDraggableBrands.length; i++) {
     draggableItems.insertAdjacentHTML("beforeend", `
-      <img class="draggable" src="./Images/Leccion/Leccion3/Pag${randomDraggableBrands[i].iconName}.png" width="48" height="48" draggable="true" style="color: ${randomDraggableBrands[i].color};" id="${randomDraggableBrands[i].iconName}"></img>
+      <img class="draggable" src="/Images/Leccion/Leccion3/Pag${randomDraggableBrands[i].iconName}.png" width="48" height="48" draggable="true" style="color: ${randomDraggableBrands[i].color};" id="${randomDraggableBrands[i].iconName}"></img>
     `);
   }
   
@@ -137,7 +138,7 @@ function drop(event) {
     event.target.classList.add("dropped");
     draggableElement.classList.add("dragged");
     draggableElement.setAttribute("draggable", "false");
-    event.target.innerHTML = `<img src="./Images/Leccion/Leccion3/Pag${draggableElementBrand}.png" width="48" height="48" style="color: ${draggableElement.style.color};"></img>`;
+    event.target.innerHTML = `<img src="/Images/Leccion/Leccion3/Pag${draggableElementBrand}.png" width="48" height="48" style="color: ${draggableElement.style.color};"></img>`;
     rightAudio.play();
     correct++; 
   }
@@ -159,7 +160,8 @@ function drop(event) {
   if(correct===Math.min(totalMatchingPairs, totalDraggableItems)) { // Game Over!!
     
     playAgainBtn.style.display = "block";
-    setTimeout(() => {
+      setTimeout(() => {
+      link = `/paginas/Leccion3Ej3?puntos=${puntos}`;
       winAudio.play();
       mostrarPuntos.innerHTML = `Puntos: ${puntos}`;
       document.getElementById("success-box").style.visibility = 'visible';
@@ -208,6 +210,6 @@ function PlaySoundB(num){
     }
 }
 function Next(){
-  window.location = "file:///D:/Descarguitas/Capstone/JuegoMemoria/Leccion1Ej2"
+    window.location = link;
   /*/auth/login*/
 }

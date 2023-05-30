@@ -3,14 +3,15 @@ document.getElementById("error-box").style.visibility = 'hidden';
 document.getElementById("container").style.visibility = 'hidden';
 document.getElementById("title").style.visibility = 'hidden';
 document.getElementById("info-box").style.visibility = 'visible';
-let startAudio = new Audio('./sounds/Leccion3/Ej1/Leccion3Ej1Intro.wav');
-let winAudio = new Audio('./sounds/BienHecho.wav');
-let loseAudio = new Audio('./sounds/BuenIntento.wav');
+let startAudio = new Audio('/sounds/Leccion3/Ej1/Leccion3Ej1Intro.wav');
+let winAudio = new Audio('/sounds/Leccion1/BienHecho.wav');
+let loseAudio = new Audio('/sounds/Leccion1/BuenIntento.wav');
 let puntos = 0;
 let mostrarPuntos = document.getElementById('puntos');
 let mostrarPuntos2 = document.getElementById('puntos2');
+let link = null;
 function Next(){
-    window.location = "file:///D:/Descarguitas/Capstone/JuegoMemoria/Leccion1Ej2"
+    window.location = link;
     /*/auth/login*/
 }
 function Inicio(){
@@ -79,10 +80,12 @@ function drop(ev){
               };
           }
         if(arreglo[0] == "u" && arreglo[1] =="e" && arreglo[2] =="a" && arreglo[3] =="i" && arreglo[4] =="o"){
+            link = `/paginas/Leccion3Ej2?puntos=${puntos}`;
             document.getElementById("success-box").style.visibility = 'visible';
             winAudio.play();
             mostrarPuntos.innerHTML = `Puntos: ${puntos}`;
-        }else{
+        } else {
+            link = `/paginas/Leccion3Ej2?puntos=${puntos}`;
             document.getElementById("error-box").style.visibility = 'visible';
             loseAudio.play();
             mostrarPuntos2.innerHTML = `Puntos: ${puntos}`;

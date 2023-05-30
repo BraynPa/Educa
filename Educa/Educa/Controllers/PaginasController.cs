@@ -232,32 +232,38 @@ namespace Educa.Controllers
             _cookieAuthService.SetHttpContext(HttpContext);
             return View();
         }
-        public IActionResult Leccion3Ej2()
+        public IActionResult Leccion3Ej2(int puntos)
         {
             _cookieAuthService.SetHttpContext(HttpContext);
             return View();
         }
-        public IActionResult Leccion3Ej3()
+        public IActionResult Leccion3Ej3(int puntos)
         {
             _cookieAuthService.SetHttpContext(HttpContext);
             return View();
         }
-        public IActionResult Leccion3Ej4()
+        public IActionResult Leccion3Ej4(int puntos)
         {
             _cookieAuthService.SetHttpContext(HttpContext);
             return View();
         }
-        public IActionResult Leccion3Ej5()
+        public IActionResult Leccion3Ej5(int puntos)
         {
             _cookieAuthService.SetHttpContext(HttpContext);
             return View();
         }
 
-        public IActionResult Leccion3Ej6()
+        public IActionResult Leccion3Ej6(int puntos)
         {
             _cookieAuthService.SetHttpContext(HttpContext);
             return View();
         }
+        public IActionResult Leccion3Finish(int puntos)
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            return RedirectToAction("Subtemas", "Home", new { tema = 1 });
+        }
+        
         public IActionResult Leccion4Pag1()
         {
             _cookieAuthService.SetHttpContext(HttpContext);

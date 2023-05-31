@@ -269,10 +269,55 @@ namespace Educa.Controllers
             _cookieAuthService.SetHttpContext(HttpContext);
             return View();
         }
+        public IActionResult Leccion4Pag2()
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            return View();
+        }
+        public IActionResult Leccion4Pag3()
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            return View();
+        }
+        public IActionResult Leccion4Ej1(int puntos)
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            return View();
+        }
+        public IActionResult Leccion4Ej2(int puntos)
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            return View();
+        }
+        public IActionResult Leccion4Finish(int puntos)
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            return RedirectToAction("Lecciones", "Home", new { subtema = 2 });
+        }
         public IActionResult Leccion5Pag1()
         {
             _cookieAuthService.SetHttpContext(HttpContext);
             return View();
+        }
+        public IActionResult Leccion5Pag2()
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            return View();
+        }
+        public IActionResult Leccion5Ej1(int puntos)
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            return View();
+        }
+        public IActionResult Leccion5Ej2(int puntos)
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            return View();
+        }
+        public IActionResult Leccion5Finish(int puntos)
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            return RedirectToAction("Subtemas", "Home", new { tema = 1 });
         }
     }
 }

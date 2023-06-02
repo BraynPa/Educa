@@ -112,6 +112,18 @@ namespace Educa.Controllers
             ViewBag.Avatar = _context.AvatarUsuario(_cookieAuthService.LoggedUser().User);
             return View();
         }
+        public IActionResult NotasUsuario()
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            var nombre = _cookieAuthService.LoggedUser().User;
+            ViewBag.Nombre = nombre;
+            ViewBag.Nombre = nombre;
+            ViewBag.Avatar = _context.AvatarUsuario(nombre);
+            ViewBag.Temas = _repository.TodosTemasU(nombre);
+            ViewBag.Subtemas = _repository.TodosSubtemasU(nombre);
+            ViewBag.Lecciones = _repository.TodosLeccionesU(nombre);
+            return View();
+        }
         public IActionResult PagLecciones(int leccion)
         {
             _cookieAuthService.SetHttpContext(HttpContext);

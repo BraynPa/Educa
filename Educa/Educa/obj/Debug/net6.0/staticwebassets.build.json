@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fTYuM9e3rBgfBGZR7azhD5i1mqFOmfNL+S7cukFh9ts=",
+  "Hash": "k0U0GiaFeGbjvywcY+cwkL7O7L9Eq9h1HJbf9ieQIZg=",
   "Source": "Educa",
   "BasePath": "_content/Educa",
   "Mode": "Default",
@@ -712,6 +712,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\LogoutStyle.css"
+    },
+    {
+      "Identity": "D:\\2023-1\\Capstone\\Codigo\\Educa\\Educa\\wwwroot\\css\\NotaUsuarioStyle.css",
+      "SourceId": "Educa",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\2023-1\\Capstone\\Codigo\\Educa\\Educa\\wwwroot\\",
+      "BasePath": "_content/Educa",
+      "RelativePath": "css/NotaUsuarioStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\NotaUsuarioStyle.css"
     },
     {
       "Identity": "D:\\2023-1\\Capstone\\Codigo\\Educa\\Educa\\wwwroot\\css\\PreHistoriaStyle.css",

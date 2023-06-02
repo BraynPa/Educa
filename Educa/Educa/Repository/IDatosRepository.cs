@@ -41,9 +41,12 @@ namespace Educa.Repository
         public int NumerosubtemasEnProgreso(string user, int id);
         public int NumeroLeccionesEnProgreso(string user, int id);
         List<UsuarioCurso> CursosU(string user);
+        List<UsuarioTema> TodosTemasU(string user);
         List<UsuarioTema> TemasU(string user, int id);
         List<UsuarioSubtema> SubtemasU(string user, int id);
+        List<UsuarioSubtema> TodosSubtemasU(string user);
         List<UsuarioLeccion> LeccionesU(string user, int id);
+        List<UsuarioLeccion> TodosLeccionesU(string user);
         List<UsuarioLibro> LibrosU(string user);
         List<UsuarioSubtemaPregunta> PruebasSubtemaU(string user, int idSubtema);
 
@@ -605,15 +608,30 @@ namespace Educa.Repository
             int Id = _usuario.EncontrarIdUsuario(user);
             return _context._usuarioTema.Where(s => s.IdUsuario == Id && s.Temas.IdCurso == id).Include(s => s.Temas.Colores).ToList();
         }
+        public List<UsuarioTema> TodosTemasU(string user)
+        {
+            int Id = _usuario.EncontrarIdUsuario(user);
+            return _context._usuarioTema.Where(s => s.IdUsuario == Id).Include(s => s.Temas.Cursos).ToList();
+        }
         public List<UsuarioSubtema> SubtemasU(string user, int id)
         {
             int Id = _usuario.EncontrarIdUsuario(user);
             return _context._usuarioSubtema.Where(s => s.IdUsuario == Id && s.Subtemas.IdTema == id).Include(s => s.Subtemas.Colores).ToList();
         }
+        public List<UsuarioSubtema> TodosSubtemasU(string user)
+        {
+            int Id = _usuario.EncontrarIdUsuario(user);
+            return _context._usuarioSubtema.Where(s => s.IdUsuario == Id).Include(s => s.Subtemas.Temas).ToList();
+        }
         public List<UsuarioLeccion> LeccionesU(string user, int id)
         {
             int Id = _usuario.EncontrarIdUsuario(user);
             return _context._usuarioLeccion.Where(s => s.IdUsuario == Id && s.Lecciones.IdSubtema == id).Include(s => s.Lecciones.Colores).ToList();
+        }
+        public List<UsuarioLeccion> TodosLeccionesU(string user)
+        {
+            int Id = _usuario.EncontrarIdUsuario(user);
+            return _context._usuarioLeccion.Where(s => s.IdUsuario == Id).Include(s => s.Lecciones.Subtemas).ToList();
         }
         public List<UsuarioLibro> LibrosU(string user)
         {

@@ -1,15 +1,16 @@
-﻿@{Layout = null;}
+﻿
+@{Layout = null;}
 <!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
   <title>Educa</title>
-  <link rel="stylesheet" href="~/css/EducaNinjaStyle.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 <link rel="stylesheet" href="~/css/site.css">
-<link rel="stylesheet" href="~/css/InfoStyle.css">
 <link rel="shortcut icon" href="~/Images/Home/LogoIconEduca.png">
-
+<link rel="stylesheet" href="~/css/NotaUsuarioStyle.css">
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -18,7 +19,7 @@
     <div class="app-header-left">
       <span class="app-icon"></span>
       <p class="app-name">Educa</p>
-      <p class="app-Coment aboutP">Es hora de Aprender</p>
+      <p class="app-Coment">Es hora de Aprender</p>
     </div>
     <div class="app-header-right">
       <button class="mode-switch" title="Switch Theme">
@@ -45,7 +46,7 @@
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
           <polyline points="9 22 9 12 15 12 15 22" /></svg>
       </a>
-      <a href="/home/notasUsuario" class="app-sidebar-link">
+      <a href="/home/NotasUsuario" class="app-sidebar-link active">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89L7 23l5-3l5 3l-1.21-9.12"/></g></svg>
       </a>
       <a href="/home/educaNinja" class="app-sidebar-link">
@@ -55,7 +56,7 @@
           <line x1="8" y1="2" x2="8" y2="6" />
           <line x1="3" y1="10" x2="21" y2="10" /></svg>
       </a>
-      <a href="/home/info" class="app-sidebar-link active">
+      <a href="/home/info" class="app-sidebar-link">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></g></svg>
           <defs />
           <circle cx="12" cy="12" r="3" />
@@ -67,67 +68,146 @@
       </a>
     </div>
     <div class="projects-section">
-        <div class="project-boxes jsGridView">
-        <!DOCTYPE html>
-        <html lang="en">
-        
-        <head>
-          <meta charset="UTF-8" />
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link rel="stylesheet" href="about.css" />
-          <title>Educa</title>
-        </head>
-        
-        <body>
-          <div class="about">
-            <!-- ------------------------------------ -->
-            <div class="upper">
-              <div class="logo">
-                <!--      here i put the logo i made but the links were not working and the logo didn't show so removed it :(      -->
-                <div class="image">
-                  <div class="camp">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1236/1236196.png?w=740&t=st=1683683505~exp=1683684105~hmac=3d937557180ffc51add6924d1450866cbb5024034a1d1453d164020a6851cf49" alt="Image" id="tent" />
-                    <img src="https://thumbs.gfycat.com/LinedGoldenKentrosaurus-max-1mb.gif" alt="Image" id="fire" />
-                  </div>
-                </div>
-              </div>
-              <div class="info">
-                <h1 class="aboutH1" >Sobre Educa</h1>
-                <p class="aboutP">
-                  Educa es un software educativo interactivo diseñado para ayudar a los niños de primer grado a aprender de manera divertida, mediante actividades interactivas y juegos para distraer su mente.
-                </p>
-              </div>
-            </div>
-            <!-- ------------------------------------ -->
-            <div class="lower">
-              <div class="info" id="lower-info">
-                <h1 class="aboutH1">Sobre nosotros</h1>
-                <p class="aboutP">
-                  Somos un equipo de estudiantes universitarios apasionados por la educación y la tecnología. Creemos que la educación es una herramienta poderosa para transformar la sociedad, y estamos comprometidos en ofrecer una solución que haga una diferencia en la vida de los niños. Nos esforzamos por crear un ambiente de aprendizaje seguro y positivo, donde los niños puedan crecer y desarrollarse de manera integral.
-                </p>
-              </div>
-              <div class="slider" id="lower-img">
-                <img src="~/Images/Landing/Us.png" alt="Image"/>
-              </div>
-            </div>
-            <!-- ------------------------------------ -->
-          </div>
-        </body>
-        <script src="about.js"></script>
-        
-        </html>
-</div>
+       <section id="content">			
+					<main>
+				<ul class="box-info">
+					@foreach (var item in ViewBag.Temas)
+					{
+								@if (item.Temas.TituloTema == "Comprensión de palabras y frases")
+								{
+									<li>
+										<i class='bx bx-ghost' ></i>
+										<span class="text">
+											<h3>@item.Temas.TituloTema</h3>
+											<p title="Promediado: Subtemas/NotasPruebas">Avance: @item.PorcentajeAvance% / Nota: @item.NotaPrueba</p>
+										</span>
+									</li>
+								}else if(item.Temas.TituloTema == "Comprensión lectora")
+								{
+									<li>
+										<i class='bx bx-book-open' ></i>
+										<span class="text">
+											<h3>@item.Temas.TituloTema</h3>
+											<p>Avance: @item.PorcentajeAvance% / Nota: @item.NotaPrueba</p>
+										</span>
+									</li>
+								}else if (item.Temas.TituloTema == "Comprensión auditiva")
+								{
+									<li>
+										<i class='bx bx-user-voice' ></i>
+										<span class="text">
+											<h3>@item.Temas.TituloTema</h3>
+											<p>Avance: @item.PorcentajeAvance% / Nota: @item.NotaPrueba</p>
+										</span>
+									</li>
+								}
+							}
+					
+					
+					
+				</ul>
+
+				<div class="table-data">
+					<div class="order">
+						<div class="head">
+							<h3>Subtemas</h3>
+							
+						</div>
+						<table>
+							<thead>
+								<tr>
+									<th>Nombre</th>
+									<th>Tipo Subtema</th>
+									<th>Nota Prueba</th>
+									<th>Tema(Pertenece)</th>
+									<th>Estado</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var item in ViewBag.Subtemas){
+									<tr>
+									<td>
+										<img src="@item.Subtemas.LinkImgSubtema">
+										<p>@item.Subtemas.TituloSubtema</p>
+									</td>
+									<td>@item.Subtemas.TipoSubtema</td>
+									<td>@item.NotaPrueba</td>
+									<td>@item.Subtemas.Temas.TituloTema</td>
+												@if (item.EstadoSubtema == "TerminadoTodo")
+												{
+													<td><span class="status completed">Terminado</span></td>
+												}else if(item.EstadoSubtema == "Inhabilitado")
+												{
+													<td><span class="status pending">No iniciado</span></td>
+												}
+												else
+												{
+													<td><span class="status process">En proceso</span></td>
+												}
+
+								</tr>
+								}
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="table-data">
+					<div class="order">
+						<div class="head">
+							<h3>Lecciones</h3>
+							
+						</div>
+						<table>
+							<thead>
+								<tr>
+									<th>Nombre</th>
+									<th>Tipo Lección</th>
+									<th title="Promediado con los Ejercicios">Nota Lección</th>
+									<th>Subtema(Pertenece)</th>
+									<th>Estado</th>
+								</tr>
+							</thead>
+							<tbody>
+										@foreach (var item in ViewBag.Lecciones)
+										{
+											<tr>
+												<td>
+													<img src="@item.Lecciones.LinkImgLeccion">
+													<p>@item.Lecciones.TituloLeccion</p>
+												</td>
+												<td>@item.Lecciones.TipoLeccion</td>
+												<td>@item.NotaLeccion</td>
+												<td>@item.Lecciones.Subtemas.TituloSubtema</td>
+												@if (item.EstadoLeccion == "Terminado")
+												{
+													<td><span class="status completed">Terminado</span></td>
+												}else if(item.EstadoLeccion == "Inhabilitado")
+												{
+													<td><span class="status pending">No iniciado</span></td>
+												}
+												else
+												{
+													<td><span class="status process">En proceso</span></td>
+												}
+											</tr>
+										}
+										
+							</tbody>
+						</table>
+						<br />
+						<br />
+					</div>
+				</div>	
+		</main>
+		<!-- MAIN -->
+	</section>
     </div>
+     
   </div>
   </div>
 </div>
 <!-- partial -->
-    <script src="~/js/site.js"></script>
-    <script src="~/js/InfoScript.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
 </body>
 </html>

@@ -14,6 +14,14 @@ namespace Educa.BD.Maps
              WithOne(o => o.Pruebas).
              HasForeignKey(o => o.IdPrueba);
 
+            builder.HasMany(o => o.UsuarioLibroPreguntas).
+             WithOne(o => o.Pruebas).
+             HasForeignKey(o => o.IdPrueba);
+
+            builder.HasMany(o => o.UsuarioSubtemaPreguntas).
+            WithOne(o => o.Pruebas).
+            HasForeignKey(o => o.IdPrueba);
+
         }
     }
 }

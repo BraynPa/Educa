@@ -10,13 +10,7 @@ namespace Educa.BD.Maps
             builder.ToTable("PreguntaPrueba");
             builder.HasKey(o => o.Id);
 
-            builder.HasMany(o => o.UsuarioLibroPreguntas).
-             WithOne(o => o.PreguntaPruebas).
-             HasForeignKey(o => o.IdPreguntaPrueba);
-
-            builder.HasMany(o => o.UsuarioSubtemaPreguntas).
-            WithOne(o => o.PreguntaPruebas).
-            HasForeignKey(o => o.IdPreguntaPrueba);
+            
 
         }
     }

@@ -4,9 +4,10 @@
     {
         public int Id { get; set; }
         public int IdUsuarioSubtema { get; set; }
-        public int IdPreguntaPrueba { get; set; }
-        public int ValorPregunta { get; set; }
+        public int IdPrueba { get; set; }
+        public string? Estado { get; set; }
+        public int Nota { get; set; }
         public UsuarioSubtema? UsuarioSubtemas { get; set; }
-        public PreguntaPrueba? PreguntaPruebas { get; set; }
+        public Prueba? Pruebas { get; set; }
     }
 }

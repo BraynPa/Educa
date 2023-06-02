@@ -22,7 +22,9 @@ namespace Educa.BD.Maps
             WithOne(o => o.Lecciones).
             HasForeignKey(o => o.IdLeccion);
 
-
+            builder.HasMany(o => o.PagLecciones).
+            WithOne(o => o.Lecciones).
+            HasForeignKey(o => o.IdLeccion);
         }
     }
 }

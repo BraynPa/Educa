@@ -133,6 +133,7 @@ namespace Educa.Controllers
         public IActionResult AvatarUser(string user)
         {
             ViewBag.Nombre = user;
+            _repository.RegistroTablasUsuario(user);
             _cookieAuthService.SetHttpContext(HttpContext);
             return View();
         }
@@ -195,7 +196,7 @@ namespace Educa.Controllers
         [HttpGet]
         public IActionResult DatosUsuarios(string dato)
         {
-            _repository.RegistroTablasUsuario(dato);
+            _repository.RegistroTablasPruebas(dato);
             _cookieAuthService.SetHttpContext(HttpContext);
             return View();
         }

@@ -31,11 +31,15 @@ namespace Educa.Controllers
         {
             _cookieAuthService.SetHttpContext(HttpContext);
             var nombre = _cookieAuthService.LoggedUser().User;
+            int id = _context.EncontrarIdUsuario(nombre);
             ViewBag.Nombre = nombre;
             ViewBag.Avatar = _context.AvatarUsuario(nombre);
             ViewBag.Cursos = _repository.CursosU(nombre);
             ViewBag.Total = _repository.NumeroCursos();
             ViewBag.Progreso = _repository.NumeroCursosEnProgreso(nombre);
+            //_repository.ActualizarTodosPorcentajeSubtema(id);
+            //_repository.ActualizarTodosPorcentajeTema(id);
+            //_repository.ActualizarTodosPorcentajeCurso(id);
             DateTime fecha = DateTime.Now;
             string FechaFormateada = fecha.ToString("MMMM", new System.Globalization.CultureInfo("es-ES")) + " " + fecha.ToString("dd", new System.Globalization.CultureInfo("es-ES"));
             FechaFormateada = char.ToUpper(FechaFormateada[0]) + FechaFormateada.Substring(1);
@@ -67,7 +71,7 @@ namespace Educa.Controllers
             ViewBag.Tema = _repository.ObtenerNombreTema(tema);
             ViewBag.Subtemas = _repository.SubtemasU(nombre, tema);
             ViewBag.Total = _repository.NumeroSubtemas(tema);
-            ViewBag.Progreso = _repository.NumeroTemasEnProgreso(nombre, tema);
+            ViewBag.Progreso = _repository.NumerosubtemasEnProgreso(nombre, tema);
             DateTime fecha = DateTime.Now;
             string FechaFormateada = fecha.ToString("MMMM", new System.Globalization.CultureInfo("es-ES")) + " " + fecha.ToString("dd", new System.Globalization.CultureInfo("es-ES"));
             FechaFormateada = char.ToUpper(FechaFormateada[0]) + FechaFormateada.Substring(1);
@@ -88,6 +92,7 @@ namespace Educa.Controllers
             ViewBag.Lecciones = _repository.LeccionesU(nombre, subtema);
             ViewBag.Total = _repository.NumeroLecciones(subtema);
             ViewBag.Progreso = _repository.NumeroLeccionesEnProgreso(nombre, subtema);
+            ViewBag.Pruebas = _repository.PruebasSubtemaU(nombre, subtema);
             DateTime fecha = DateTime.Now;
             string FechaFormateada = fecha.ToString("MMMM", new System.Globalization.CultureInfo("es-ES")) + " " + fecha.ToString("dd", new System.Globalization.CultureInfo("es-ES"));
             FechaFormateada = char.ToUpper(FechaFormateada[0]) + FechaFormateada.Substring(1);
@@ -109,31 +114,19 @@ namespace Educa.Controllers
         }
         public IActionResult PagLecciones(int leccion)
         {
-            if(leccion == 1)
+            _cookieAuthService.SetHttpContext(HttpContext);
+            var nombre = _cookieAuthService.LoggedUser().User;
+            int id = _context.EncontrarIdUsuario(nombre);
+            var nombreLeccion = _repository.NombrePaginaLeccion(leccion,id);
+            if(nombreLeccion == "Completado")
             {
-                return RedirectToAction("Leccion1Pag1","Paginas");
-            }            
-            else if (leccion == 2)
-            {
-                return RedirectToAction("Leccion2Pag1", "Paginas");
+                return RedirectToAction("Lecciones", "home");
             }
-            else if (leccion == 3)
+            else
             {
-                return RedirectToAction("Leccion3Pag1", "Paginas");
+                return RedirectToAction(nombreLeccion, "Paginas");
             }
-            else if (leccion == 4)
-            {
-                return RedirectToAction("Leccion4Pag1", "Paginas");
-            }
-            else if (leccion == 5)
-            {
-                return RedirectToAction("Leccion5Pag1", "Paginas");
-            }
-            else if (leccion == 6)
-            {
-                return RedirectToAction("Leccion6Pag1", "Paginas");
-            }
-            return View();
+          
         }
         
 

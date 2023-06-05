@@ -1,11 +1,13 @@
 ﻿using Educa.Models;
 using Educa.Repository;
 using Educa.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace Educa.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly IUsuarioRepository _context;

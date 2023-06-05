@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options => {
-        options.LoginPath = "/auth/login";
+        options.LoginPath = "/auth/UserNotFound";
     });
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<EducaContext>(

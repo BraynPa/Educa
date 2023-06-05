@@ -29,6 +29,10 @@ namespace Educa.Controllers
         {
             return View();
         }
+        public ActionResult UserNotFound()
+        {
+            return View();
+        }
         [HttpGet]
         public IActionResult Login()
         {

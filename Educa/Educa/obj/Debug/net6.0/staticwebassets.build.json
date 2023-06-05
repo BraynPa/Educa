@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "k0U0GiaFeGbjvywcY+cwkL7O7L9Eq9h1HJbf9ieQIZg=",
+  "Hash": "bamel+8l8Se0poWeDWPDw08xqlc2JzIeLqcPhjnXmdQ=",
   "Source": "Educa",
   "BasePath": "_content/Educa",
   "Mode": "Default",
@@ -831,6 +831,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Subtema1Exam2Style.css"
+    },
+    {
+      "Identity": "D:\\2023-1\\Capstone\\Codigo\\Educa\\Educa\\wwwroot\\css\\UserNotFoundStyle.css",
+      "SourceId": "Educa",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\2023-1\\Capstone\\Codigo\\Educa\\Educa\\wwwroot\\",
+      "BasePath": "_content/Educa",
+      "RelativePath": "css/UserNotFoundStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\UserNotFoundStyle.css"
     },
     {
       "Identity": "D:\\2023-1\\Capstone\\Codigo\\Educa\\Educa\\wwwroot\\Documentos\\Leccion6Arbol.pdf",

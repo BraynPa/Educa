@@ -1,10 +1,12 @@
 ﻿using Educa.Repository;
 using Educa.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Educa.Controllers
 {
+    [Authorize]
     public class PaginasController : Controller
     {
         private readonly IUsuarioRepository _context;

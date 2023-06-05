@@ -1,0 +1,53 @@
+﻿@{Layout = null;}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Educa</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;800&amp;family=Roboto:wght@400;700&amp;display=swap'><link rel="stylesheet" href="~/css/UserNotFoundStyle.css">
+   <link rel="shortcut icon" href="~/Images/Home/LogoIconEduca.png">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="card">
+      <h3>Oh, no! No has iniciado sesión.</h3>
+      <p>
+        Has clic en Iniciar sesión para empezar a aprender junto a Educa.
+      </p>
+
+      <button id="LogIn" class="btn btn-primary"onclick="Next()">Iniciar sesión</button>
+      <button id="Home" class="btn btn-secondary"onclick="NextHome()">Inicio</button>
+
+      <div class="emo-container">
+        <div class="bunny">
+          <div class="ear l"></div>
+          <div class="ear r"></div>
+          <div class="face">
+            <div class="eye l"></div>
+            <div class="eye r"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+            <div class="mostash l"></div>
+            <div class="mostash r"></div>
+          </div>
+          <div class="hand l"></div>
+          <div class="hand r"></div>
+
+          <div class="leg l"></div>
+          <div class="leg r"></div>
+          <div class="tail"></div>
+        </div>
+      </div>
+    </div>
+<!-- partial -->
+    <script>
+      function Next(){
+          window.location = "/auth/login";
+      }
+      function NextHome(){
+          window.location = "/auth/landing";
+      }
+    </script>
+</body>
+</html>
+

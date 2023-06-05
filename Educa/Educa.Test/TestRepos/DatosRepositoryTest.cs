@@ -26,6 +26,7 @@ namespace Educa.Test.TestRepos
         IQueryable<Leccion>? dataLeccion;
         IQueryable<PagLeccion>? dataPagLeccion;
         IQueryable<Ejercicio>? dataEjercicio;
+        IQueryable<UsuarioCurso>? dataUCursos;
         IQueryable<UsuarioLeccionPag> dataULeccionPags;
         IQueryable<UsuarioLeccion> dataULeccion;
         IQueryable<UsuarioEjercicio>? dataUEjercicio;
@@ -126,6 +127,10 @@ namespace Educa.Test.TestRepos
                 new(){Id=3, TituloSubtema= "Palabras que Rimen", DescripcionSubtema = "", LinkImgSubtema ="", TipoSubtema ="Forma", IdColor= 1,IdTema = 1},
                 new(){Id=4, TituloSubtema= "Historias Sencillas", DescripcionSubtema = "", LinkImgSubtema ="", TipoSubtema ="Forma", IdColor= 1,IdTema = 2},
                 new(){Id=5, TituloSubtema= "Instrucciones Simples", DescripcionSubtema = "", LinkImgSubtema ="", TipoSubtema ="Forma", IdColor= 1,IdTema = 3},
+            }.AsQueryable();
+            dataUCursos = new List<UsuarioCurso>
+            {
+                new(){Id=1,IdUsuario = 1 , IdCurso = 1, EstadoCurso = "Habilitado", NotaPrueba = 0, PorcentajeAvance = 2, UltFechaModif = fecha}
             }.AsQueryable();
         }
 
@@ -297,6 +302,36 @@ namespace Educa.Test.TestRepos
             var repo = new DatosRepository(mockDB.Object, null);
             var rpta = repo.NumeroTemas(1);
             Assert.AreEqual(3, rpta);
+        }
+        [Test]
+        public void ObtenerNumeroSubtemaTest()
+        {
+            var mockDbSubtema = new MockDBSet<Subtema>(dataSubtema);
+            var mockDB = new Mock<EducaContext>();
+            mockDB.Setup(o => o._subtema).Returns(mockDbSubtema.Object);
+            var repo = new DatosRepository(mockDB.Object, null);
+            var rpta = repo.NumeroSubtemas(3);
+            Assert.AreEqual(1, rpta);
+        }
+        [Test]
+        public void ObtenerNumeroLeccionTest()
+        {
+            var mockDbLeccion = new MockDBSet<Leccion>(dataLeccion);
+            var mockDB = new Mock<EducaContext>();
+            mockDB.Setup(o => o._leccion).Returns(mockDbLeccion.Object);
+            var repo = new DatosRepository(mockDB.Object, null);
+            var rpta = repo.NumeroLecciones(1);
+            Assert.AreEqual(1, rpta);
+        }
+        [Test]
+        public void ObtenerNumeroCursosEnProgresoTest()
+        {
+            var mockDbUCursos = new MockDBSet<UsuarioCurso>(dataUCursos);
+            var mockDB = new Mock<EducaContext>();
+            mockDB.Setup(o => o._usuarioCurso).Returns(mockDbUCursos.Object);
+            var repo = new DatosRepository(mockDB.Object, null);
+            var rpta = repo.NumeroCursosEnProgreso(1);
+            Assert.AreEqual(0, rpta);
         }
     }
 }

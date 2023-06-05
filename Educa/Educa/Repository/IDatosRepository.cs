@@ -36,7 +36,7 @@ namespace Educa.Repository
         public int NumeroTemas(int id);
         public int NumeroSubtemas(int id);
         public int NumeroLecciones(int id);
-        public int NumeroCursosEnProgreso(string user);
+        public int NumeroCursosEnProgreso(int id);
         public int NumeroTemasEnProgreso(string user, int id);
         public int NumerosubtemasEnProgreso(string user, int id);
         public int NumeroLeccionesEnProgreso(string user, int id);
@@ -574,10 +574,10 @@ namespace Educa.Repository
             int num = _context._leccion.Where(s => s.IdSubtema == id).ToList().Count();
             return num;
         }
-        public int NumeroCursosEnProgreso(string user)
+        public int NumeroCursosEnProgreso(int id)
         {
-            int Id = _usuario.EncontrarIdUsuario(user);
-            int num = _context._usuarioCurso.Where(o => o.IdUsuario == Id && o.EstadoCurso == "Terminado").ToList().Count();
+           
+            int num = _context._usuarioCurso.Where(o => o.IdUsuario == id && o.EstadoCurso == "Terminado").ToList().Count();
             return num;
         }
         public int NumeroTemasEnProgreso(string user, int id)

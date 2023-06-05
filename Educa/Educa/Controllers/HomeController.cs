@@ -38,7 +38,7 @@ namespace Educa.Controllers
             ViewBag.Avatar = _context.AvatarUsuario(nombre);
             ViewBag.Cursos = _repository.CursosU(nombre);
             ViewBag.Total = _repository.NumeroCursos();
-            ViewBag.Progreso = _repository.NumeroCursosEnProgreso(nombre);
+            ViewBag.Progreso = _repository.NumeroCursosEnProgreso(id);
             //_repository.ActualizarTodosPorcentajeSubtema(id);
             //_repository.ActualizarTodosPorcentajeTema(id);
             //_repository.ActualizarTodosPorcentajeCurso(id);

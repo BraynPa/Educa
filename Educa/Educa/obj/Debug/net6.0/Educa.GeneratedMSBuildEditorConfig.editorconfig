@@ -75,6 +75,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yaWFcVG9tYXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Home/EditPassUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0UGFzc1VzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Home/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Home/EducaNinja.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZHVjYU5pbmphLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -337,6 +345,30 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Paginas/Leccion6Pag1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnaW5hc1xMZWNjaW9uNlBhZzEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Paginas/Leccion7Ej1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnaW5hc1xMZWNjaW9uN0VqMS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Paginas/Leccion7Pag1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnaW5hc1xMZWNjaW9uN1BhZzEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Paginas/Leccion7Pag2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnaW5hc1xMZWNjaW9uN1BhZzIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Paginas/Leccion7Pag3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnaW5hc1xMZWNjaW9uN1BhZzMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Paginas/Leccion7Pag4.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnaW5hc1xMZWNjaW9uN1BhZzQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Paginas/Leccion7Pag5.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnaW5hc1xMZWNjaW9uN1BhZzUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Paginas/Subtema1Exam1.cshtml]

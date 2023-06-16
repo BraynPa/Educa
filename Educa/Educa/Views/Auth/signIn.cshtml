@@ -1,4 +1,6 @@
-﻿@{Layout = null;}
+﻿@{Layout = null;
+var usuario = (Usuario)Model;}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,45 +26,51 @@
                 <div class="column">
                     <p class="title">Datos del niño</p>
                     <div class="input-container">
-                        <input type="text" id="input" name="NombreUsuario" required="" >
+                        <input type="text" id="input" value="@usuario.NombreUsuario" name="NombreUsuario" required="" >
                         <label for="input" class="label">Nombre</label>
                         <div class="underline"></div>
                     </div>
+                    
                     <div class="input-container">
-                        <input type="number" id="age" name="Age"  required="">
+                        <input type="number" id="age" value="@usuario.Age" name="Age"  required="">
                         <label for="input" class="label">Edad</label>
                         <div class="underline"></div>
                     </div>
+                    @Html.ValidationMessage("AgeVacio")
+                    @Html.ValidationMessage("AgeError")
                     <div class="input-container">
-                        <input type="text" id="input" name="Escuela"required="">
+                        <input type="text" id="input" value="@usuario.Escuela" name="Escuela"required="">
                         <label for="input" class="label">Institución Educativa</label>
                         <div class="underline"></div>
                     </div>
                     <div class="input-container">
-                        <input type="text" id="input" name="User" required="" >
+                        <input type="text" id="input" value="@usuario.User" name="User" required="" >
                         <label for="input" class="label">Usuario</label>
                         <div class="underline"></div>
                     </div>
+                    @Html.ValidationMessage("UsernameE")
+                    @Html.ValidationMessage("UserVacio")
                     <div class="input-container">
                         <input type="password" id="input" name="password" required="" >
                         <label for="input" class="label">Contraseña</label>
                         <div class="underline"></div>
                     </div>
+                    @Html.ValidationMessage("passwordVacio")
                 </div>
                 <div class="column">
                     <p class="title">Datos del tutor</p>
                     <div class="input-container">
-                        <input type="text" id="input" name="NombreTutor"required="">
+                        <input type="text" id="input" value="@usuario.NombreTutor" name="NombreTutor"required="">
                         <label for="input" class="label">Nombre</label>
                         <div class="underline"></div>
                     </div>
                     <div class="input-container">
-                        <input type="email" id="input" name="EmailTutor" required="">
+                        <input type="email" id="input" value="@usuario.EmailTutor" name="EmailTutor" required="">
                         <label for="input" class="label">Correo electrónico</label>
                         <div class="underline"></div>
                     </div>
                     <div class="input-container">
-                        <input type="text" id="input" name="CelularTutor" required="">
+                        <input type="text" id="input" value="@usuario.CelularTutor" name="CelularTutor" required="">
                         <label for="input" class="label">Celular</label>
                         <div class="underline"></div>
                     </div>

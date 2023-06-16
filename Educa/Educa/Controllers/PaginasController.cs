@@ -790,7 +790,100 @@ namespace Educa.Controllers
         public IActionResult Leccion6Finish(int puntos)
         {
             _cookieAuthService.SetHttpContext(HttpContext);
+            var nombre = _cookieAuthService.LoggedUser().User;
+            int id = _context.EncontrarIdUsuario(nombre);
+            if (!_repository.EjCompleta("Leccion6Ej1", id)) { _repository.EjercicioCompletado("Leccion6Ej1", id, puntos); }
+            _repository.ActualizarLeccionTerminado(id, 6);
+            _repository.ActualizarEstadoSiguienteLeccion(id, 7);
+            _repository.ActualizarSubtemaActual(id, 4);
+            _repository.ActualizarTemaActual(id, 1);
+            _repository.ActualizarCursoActual(id, 1);
             return RedirectToAction("Lecciones", "Home", new { subtema = 4 });
+        }
+        public IActionResult Leccion7Pag1()
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+
+            return View();
+        }
+        public IActionResult Leccion7Pag2()
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            var nombre = _cookieAuthService.LoggedUser().User;
+            int id = _context.EncontrarIdUsuario(nombre);
+            if (!_repository.PagCompleta("Leccion7Pag1", id)) { _repository.PagCompletado("Leccion7Pag1", id); }
+            _repository.ActualizarPorcentajesLeccion(id, 7);
+            _repository.ActualizarSubtemaActual(id, 4);
+            _repository.ActualizarTemaActual(id, 1);
+            _repository.ActualizarCursoActual(id, 1);
+            return View();
+        }
+        public IActionResult Leccion7Pag3()
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            var nombre = _cookieAuthService.LoggedUser().User;
+            int id = _context.EncontrarIdUsuario(nombre);
+            if (!_repository.PagCompleta("Leccion7Pag2", id)) { _repository.PagCompletado("Leccion7Pag2", id); }
+            _repository.ActualizarPorcentajesLeccion(id, 7);
+            _repository.ActualizarSubtemaActual(id, 4);
+            _repository.ActualizarTemaActual(id, 1);
+            _repository.ActualizarCursoActual(id, 1);
+            return View();
+        }
+        public IActionResult Leccion7Pag4()
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            var nombre = _cookieAuthService.LoggedUser().User;
+            int id = _context.EncontrarIdUsuario(nombre);
+            if (!_repository.PagCompleta("Leccion7Pag3", id)) { _repository.PagCompletado("Leccion7Pag3", id); }
+            _repository.ActualizarPorcentajesLeccion(id, 7);
+            _repository.ActualizarSubtemaActual(id, 4);
+            _repository.ActualizarTemaActual(id, 1);
+            _repository.ActualizarCursoActual(id, 1);
+            return View();
+        }
+        public IActionResult Leccion7Pag5()
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            var nombre = _cookieAuthService.LoggedUser().User;
+            int id = _context.EncontrarIdUsuario(nombre);
+            if (!_repository.PagCompleta("Leccion7Pag4", id)) { _repository.PagCompletado("Leccion7Pag4", id); }
+            _repository.ActualizarPorcentajesLeccion(id, 7);
+            _repository.ActualizarSubtemaActual(id, 4);
+            _repository.ActualizarTemaActual(id, 1);
+            _repository.ActualizarCursoActual(id, 1);
+            return View();
+        }
+        public IActionResult Leccion7Ej1(int puntos)
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            var nombre = _cookieAuthService.LoggedUser().User;
+            int id = _context.EncontrarIdUsuario(nombre);
+            if (!_repository.PagCompleta("Leccion7Pag5", id)) { _repository.PagCompletado("Leccion7Pag5", id); }
+            _repository.ActualizarPorcentajesLeccion(id, 7);
+            _repository.ActualizarSubtemaActual(id, 4);
+            _repository.ActualizarTemaActual(id, 1);
+            _repository.ActualizarCursoActual(id, 1);
+            return View();
+        }
+        public IActionResult Leccion7Finish(int puntos)
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            var nombre = _cookieAuthService.LoggedUser().User;
+            int id = _context.EncontrarIdUsuario(nombre);
+            if (!_repository.EjCompleta("Leccion7Ej1", id)) { _repository.EjercicioCompletado("Leccion7Ej1", id, puntos); }
+            _repository.ActualizarLeccionTerminado(id, 7);
+            _repository.ActualizarEstadoSiguienteLeccion(id, 8);
+            _repository.ActualizarSubtemaActual(id, 4);
+            _repository.ActualizarTemaActual(id, 1);
+            _repository.ActualizarCursoActual(id, 1);
+            return RedirectToAction("Lecciones", "Home", new { subtema = 4 });
+        }
+        public IActionResult Leccion8Pag1()
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+
+            return View();
         }
     }
 }

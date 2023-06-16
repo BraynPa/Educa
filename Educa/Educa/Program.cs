@@ -20,7 +20,7 @@ builder.Services.AddTransient<ICookieAuthService, CookieAuthService>();
 builder.Services.AddTransient<IEducaContext, EducaContext>();
 builder.Services.AddTransient<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddTransient<IDatosRepository, DatosRepository>();
-
+builder.Services.AddTransient<IValidacionesRepository, ValidacionesRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

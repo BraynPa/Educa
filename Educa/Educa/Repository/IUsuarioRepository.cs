@@ -15,6 +15,10 @@ namespace Educa.Repository
         public void AstualizarUsuario(Usuario usuario);
         public int EncontrarIdUsuario(string user);
         public string AvatarUsuario(string user);
+        public string PassUsuario(int Id);
+        public void EditarUsuario(Usuario usuario, int id);
+        public void EditarPassword(int id, string pass1);
+
 
     }
     public class UsuarioRepository : IUsuarioRepository
@@ -38,7 +42,11 @@ namespace Educa.Repository
             var Usuario = _context._usuario.FirstOrDefault(o => o.User == user);
             return Usuario.Avatar;
         }
-
+        public string PassUsuario(int Id)
+        {
+            var Usuario = _context._usuario.FirstOrDefault(o => o.Id == Id);
+            return Usuario.Password;
+        }
         public int EncontrarIdUsuario(string user)
         {
             var Usuario = _context._usuario.FirstOrDefault(o => o.User == user);
@@ -85,9 +93,31 @@ namespace Educa.Repository
                 return true;
             }
         }
+       
         public void AgregarUsuario(Usuario usuario)
         {
+            usuario.User = usuario.User.Substring(0, 1).ToUpper() + usuario.User.Substring(1).ToLower();
             _context._usuario.Add(usuario);
+            _context.SaveChanges();
+        }
+        public void EditarUsuario(Usuario usuario, int id)
+        {
+            var usuarioFinal = _context._usuario.FirstOrDefault(o => o.Id == id);
+            usuarioFinal.NombreUsuario = usuario.NombreUsuario;
+            usuarioFinal.Age = usuario.Age;
+            usuarioFinal.Escuela = usuario.Escuela;
+            usuarioFinal.User = usuario.User;
+            usuarioFinal.NombreTutor = usuario.NombreTutor;
+            usuarioFinal.EmailTutor = usuario.EmailTutor;
+            usuarioFinal.CelularTutor = usuario.CelularTutor;
+            _context._usuario.Update(usuarioFinal);
+            _context.SaveChanges();
+        }
+        public void EditarPassword(int id, string pass1)
+        {
+            var usuarioFinal = _context._usuario.FirstOrDefault(o => o.Id == id);
+            usuarioFinal.Password = pass1;
+            _context._usuario.Update(usuarioFinal);
             _context.SaveChanges();
         }
     }

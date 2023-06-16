@@ -14,14 +14,16 @@ namespace Educa.Controllers
         private readonly IUsuarioRepository _usuario;
         private readonly IDatosRepository _repository;
         private readonly ICookieAuthService _cookieAuthService;
+        private readonly IValidacionesRepository _valido;
         private readonly ILogger<AuthController> _logger;
 
-        public AuthController(IUsuarioRepository _usuario, ICookieAuthService _cookieAuthService, IDatosRepository _repository, ILogger<AuthController> logger)
+        public AuthController(IUsuarioRepository _usuario, IValidacionesRepository _valido, ICookieAuthService _cookieAuthService, IDatosRepository _repository, ILogger<AuthController> logger)
         {
 
             this._usuario = _usuario;
             this._cookieAuthService = _cookieAuthService;
             this._repository = _repository;
+            this._valido = _valido;
             _cookieAuthService.SetHttpContext(HttpContext);
             this._logger = logger;
         }
@@ -44,6 +46,7 @@ namespace Educa.Controllers
         public IActionResult Login(string username, string password)
         {
             _cookieAuthService.SetHttpContext(HttpContext);
+            username = username.Substring(0, 1).ToUpper() + username.Substring(1).ToLower();
             var usuario = _usuario.EncontrarUsuario(username, password);
             if (usuario != null)
             {
@@ -59,6 +62,30 @@ namespace Educa.Controllers
 
 
                 return RedirectToAction("PreIndex", "Home");
+            }
+
+            ViewBag.Alert = "Enable";
+            return View();
+        }
+        public IActionResult LoginEdit(string username, string password)
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            username = username.Substring(0, 1).ToUpper() + username.Substring(1).ToLower();
+            var usuario = _usuario.EncontrarUsuario(username, password);
+            if (usuario != null)
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, username)
+                };
+
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+                _cookieAuthService.SetHttpContext(HttpContext);
+                _cookieAuthService.Login(claimsPrincipal);
+
+
+                return RedirectToAction("EditUser", "Home", new { statusE = "Editado!" });
             }
 
             ViewBag.Alert = "Enable";
@@ -98,35 +125,64 @@ namespace Educa.Controllers
             return RedirectToAction("Login", "Auth");
         }
         [HttpGet]
-        public IActionResult SignIn()
+        public ViewResult SignIn()
         {
             _cookieAuthService.SetHttpContext(HttpContext);
-            return View();
+            return View("SignIn", new Usuario());
         }
         [HttpPost]
-        public IActionResult SignIn(Usuario usuario)
+        public ActionResult SignIn(Usuario usuario)
         {
-            if (_usuario.BuscarUsuarioUser(usuario.NombreUsuario) == true)
+            usuario.User = usuario.User.Substring(0, 1).ToUpper() + usuario.User.Substring(1).ToLower();
+            if (usuario.NombreUsuario == null)
             {
-                ModelState.AddModelError("Username", "Usuario existente");
+                ModelState.AddModelError("NombreUsuarioVacio", "Ingresar Nombre");
+            }
+            if (usuario.Escuela == null)
+            {
+                ModelState.AddModelError("EscuelaVacio", "Ingresar Escuela");
+            }
+            if (_usuario.BuscarUsuarioUser(usuario.User) == true)
+            {
+                ModelState.AddModelError("UsernameE", "Usuario existente");
             }
             if (usuario.Age == null)
             {
-                ModelState.AddModelError("UsernameVacio", "Ingresar Usuario");
+                ModelState.AddModelError("AgeVacio", "Ingresar Edad");
             }
-
+            if (usuario.Age <= 0 || usuario.Age > 120)
+            {
+                ModelState.AddModelError("AgeError", "Edad no válida");
+            }
             if (usuario.User == null)
             {
-                ModelState.AddModelError("PasswordVacio", "Ingresar Password");
+                ModelState.AddModelError("UserVacio", "Ingresar Usuario");
+            }
+
+            if (usuario.NombreTutor == null)
+            {
+                ModelState.AddModelError("NombreTutorVacio", "Ingresar Nombre Tutor");
+            }
+            if (!_valido.emailValido(usuario.EmailTutor))
+            {
+                ModelState.AddModelError("EmailError", "Email no válido");
+            }
+            if (usuario.EmailTutor == null)
+            {
+                ModelState.AddModelError("EmailVacio", "Email no válido");
+            }
+            if (usuario.CelularTutor == null)
+            {
+                ModelState.AddModelError("CelularTutorVacio", "Ingresar Celular Tutor");
             }
             if (usuario.Password == null)
             {
-                ModelState.AddModelError("passwordConfVacio", "Ingresar password Confirmacion");
+                ModelState.AddModelError("passwordVacio", "Ingresar contraseña");
             }
 
             if (!ModelState.IsValid)
             {
-                return RedirectToAction("Signin", "Auth", usuario);
+                return View("SignIn", usuario);
             }
 
             _cookieAuthService.SetHttpContext(HttpContext);

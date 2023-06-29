@@ -12,6 +12,7 @@
         public String? EmailTutor { get; set; }
         public String? CelularTutor { get; set; }
         public String? Avatar { get; set; }
+        public DateTime Fecha { get; set; }
         public List<UsuarioCurso>? UsuarioCursos { get; set; }
         public List<UsuarioTema>? UsuarioTemas { get; set; }
         public List<UsuarioSubtema>? UsuarioSubtemas { get; set; }

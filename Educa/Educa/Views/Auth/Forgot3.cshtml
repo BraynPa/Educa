@@ -27,6 +27,7 @@
                         <form class="form" action="/auth/forgot3" method="post">
                             <span class="title">Cambiar contraseña</span>
                             <span class="subtitle">Ingresa una nueva contraseña, que puedas recordar.</span>
+                             <input type="hidden" name="emails" value="@ViewBag.Email" />
                             <div class="form-container">
                                 <input type="text" class="input" name="password" placeholder="Contraseña">
                                 <input type="text" class="input" name="passwordvalidate" placeholder="Confirmar contraseña">

@@ -20,6 +20,7 @@
     </html>
     <div class="container">
         <h1>👋 Llena los datos con ayuda de una persona mayor</h1>
+        <form id="myform" method="post" action="/auth/forgot?email=@ViewBag.Email"></form>
             <div class="row">
                 
                 <div class="column3">
@@ -27,6 +28,7 @@
                         <div class="info">
                         <span class="title">Verificación</span>
                       <p class="description">Por favor introduce el código que te hemos enviado. </p>
+                         <input type="hidden" name="emails" value="@ViewBag.Email" />
                          </div>
                           <div class="inputs">
                           <input name="a" placeholder="" type="tel" maxlength="1">
@@ -35,7 +37,7 @@
                           <input name="d" placeholder="" type="tel" maxlength="1">
                         </div>
                               <button class="validate" href="#">Verificar</button>
-                      <p class="resend">No recibes el código ?<a class="resend-action">reenviar</a></p>
+                      <p class="resend">No recibes el código ?<a onclick="document.getElementById('myform').submit();" class="resend-action">reenviar</a></p>
                       
                       </form>
                 </div>

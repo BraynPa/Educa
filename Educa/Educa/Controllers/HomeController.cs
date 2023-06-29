@@ -155,6 +155,10 @@ namespace Educa.Controllers
             }
             if (nombre != userN.User)
             {
+                if (nombre == "AdminEduca" || nombre == "Admineduca")
+                {
+                    ModelState.AddModelError("UsernameE", "Usuario existente");
+                }
                 if (_context.BuscarUsuarioUser(userN.User) == true)
                 {
                     ModelState.AddModelError("UsernameE", "Usuario existente");
@@ -180,6 +184,13 @@ namespace Educa.Controllers
             if (!_valido.emailValido(userN.EmailTutor))
             {
                 ModelState.AddModelError("EmailError", "Email no válido");
+            }
+            if (!_valido.EmailUserEqual(nombre, userN.EmailTutor))
+            {
+                if (_valido.EmailExist(userN.EmailTutor))
+                {
+                    ModelState.AddModelError("EmailExist", "Email ya registrado");
+                }
             }
             if (userN.EmailTutor == null)
             {
@@ -272,7 +283,10 @@ namespace Educa.Controllers
             var nombreLeccion = _repository.NombrePaginaLeccion(leccion,id);
             if(nombreLeccion == "Completado")
             {
-                return RedirectToAction("Lecciones", "home");
+                return RedirectToAction("Lecciones", "home", new { subtema = _repository.ObtenerIdSubtema(leccion) });
+            }else if(nombreLeccion == "NotFound")
+            {
+                return RedirectToAction("PageBeta", "home");
             }
             else
             {
@@ -280,7 +294,11 @@ namespace Educa.Controllers
             }
           
         }
-        
+        public IActionResult PageBeta()
+        {
+            _cookieAuthService.SetHttpContext(HttpContext);
+            return View();
+        }
 
         public IActionResult Privacy()
         {

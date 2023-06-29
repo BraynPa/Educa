@@ -17,10 +17,13 @@ builder.Services.AddDbContext<EducaContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection"))
 );
 builder.Services.AddTransient<ICookieAuthService, CookieAuthService>();
+//builder.Services.AddTransient<IEmailService, EmailService>();
 builder.Services.AddTransient<IEducaContext, EducaContext>();
 builder.Services.AddTransient<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddTransient<IDatosRepository, DatosRepository>();
+builder.Services.AddTransient<IAdminRepository, AdminRepository>();
 builder.Services.AddTransient<IValidacionesRepository, ValidacionesRepository>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -32,6 +32,7 @@ namespace Educa.Repository
         public string ObtenerNombreTema(int id);
         public string ObtenerNombreSubtema(int id);
         public string ObtenerNombreLeccion(int id);
+        public int ObtenerIdSubtema(int id);
         public int NumeroCursos();
         public int NumeroTemas(int id);
         public int NumeroSubtemas(int id);
@@ -232,6 +233,10 @@ namespace Educa.Repository
         }
         public string NombrePaginaLeccion(int IdLeccion, int user)
         {
+            if (_context._usuarioLeccionPag.Where(o => o.IdUsuario == user && o.PagLecciones.IdLeccion == IdLeccion).ToList().Count() == 0 && _context._usuarioEjercicio.Where(o => o.IdUsuario == user && o.Ejercicios.IdLeccion == IdLeccion).ToList().Count() == 0)
+            {
+                return "NotFound";
+            }
             var nombre = "";
             var PagLecciones = _context._usuarioLeccionPag.Where(o => o.IdUsuario == user && o.PagLecciones.IdLeccion == IdLeccion && o.Estado == "Incompleto").ToList();
             if (PagLecciones.Count == 0)
@@ -259,7 +264,7 @@ namespace Educa.Repository
                 nombre = leccion.LinkPagLeccion.ToString();
                 return nombre;
             }
-            return nombre;
+            return "NotFound";
         }
         public bool PagCompleta(string LinkPag, int user)
         {
@@ -553,6 +558,11 @@ namespace Educa.Repository
         {
             var leccion = _context._leccion.Where(o => o.Id == id).FirstOrDefault();
             return leccion.TituloLeccion;
+        }
+        public int ObtenerIdSubtema(int id)
+        {
+            var leccion = _context._leccion.Where(o => o.Id == id).FirstOrDefault();
+            return leccion.IdSubtema;
         }
         public int NumeroCursos()
         {

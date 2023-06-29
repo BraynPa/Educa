@@ -14,16 +14,20 @@ namespace Educa.Controllers
         private readonly IUsuarioRepository _usuario;
         private readonly IDatosRepository _repository;
         private readonly ICookieAuthService _cookieAuthService;
+        private readonly IAdminRepository _adminRepository;
         private readonly IValidacionesRepository _valido;
+        private readonly IEmailService _emailService;
         private readonly ILogger<AuthController> _logger;
 
-        public AuthController(IUsuarioRepository _usuario, IValidacionesRepository _valido, ICookieAuthService _cookieAuthService, IDatosRepository _repository, ILogger<AuthController> logger)
+        public AuthController(IAdminRepository _adminRepository,IEmailService _emailService,IUsuarioRepository _usuario, IValidacionesRepository _valido, ICookieAuthService _cookieAuthService, IDatosRepository _repository, ILogger<AuthController> logger)
         {
 
             this._usuario = _usuario;
             this._cookieAuthService = _cookieAuthService;
             this._repository = _repository;
             this._valido = _valido;
+            this._emailService = _emailService;
+            this._adminRepository = _adminRepository;
             _cookieAuthService.SetHttpContext(HttpContext);
             this._logger = logger;
         }
@@ -46,6 +50,19 @@ namespace Educa.Controllers
         public IActionResult Login(string username, string password)
         {
             _cookieAuthService.SetHttpContext(HttpContext);
+            if (_adminRepository.EsAdmin(username, password))
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, username)
+                };
+
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+                _cookieAuthService.SetHttpContext(HttpContext);
+                _cookieAuthService.Login(claimsPrincipal);
+                return RedirectToAction("AdminIndex", "Admin");
+            }
             username = username.Substring(0, 1).ToUpper() + username.Substring(1).ToLower();
             var usuario = _usuario.EncontrarUsuario(username, password);
             if (usuario != null)
@@ -67,6 +84,7 @@ namespace Educa.Controllers
             ViewBag.Alert = "Enable";
             return View();
         }
+        [HttpPost]
         public IActionResult LoginEdit(string username, string password)
         {
             _cookieAuthService.SetHttpContext(HttpContext);
@@ -99,30 +117,60 @@ namespace Educa.Controllers
         }
         [HttpPost]
         public IActionResult Forgot(string email)
-        {         
-           return RedirectToAction("Forgot2", "Auth");
+        {  
+           EmailDTO emailDTO = new EmailDTO();
+            string asunto = _valido.EmailRecupera(email);
+            emailDTO.Para = email;
+            emailDTO.Asunto = "Código de Verificación";
+            emailDTO.Contenido = asunto;
+            _emailService.SendEmail(emailDTO);
+            return RedirectToAction("Forgot2", "Auth", new { emailse = email });
         }
         [HttpGet]
-        public IActionResult Forgot2()
+        public IActionResult Forgot2(string emailse)
         {
             //_cookieAuthService.SetHttpContext(HttpContext);
+            ViewBag.Email = emailse;
             return View();
         }
         [HttpPost]
-        public IActionResult Forgot2(string a, string b, string c, string d)
+        public IActionResult Forgot2(string a, string b, string c, string d, string emails)
         {
-            return RedirectToAction("Forgot3", "Auth");
+            string pin = a + b + c + d;
+            if (_valido.PinValidate(pin,emails)) 
+            {
+                return RedirectToAction("Forgot3", "Auth", new { email = emails });
+            }else
+            {
+                ModelState.AddModelError("PinNovalido", "Pin Incorrecto");
+            }
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Forgot2", "Auth", new { emailse = emails});
+            }
+            return View("Forgot2", new { emailse = emails });
         }
         [HttpGet]
-        public IActionResult Forgot3()
+        public IActionResult Forgot3(string email)
         {
             //_cookieAuthService.SetHttpContext(HttpContext);
+            ViewBag.Email = email;
             return View();
         }
         [HttpPost]
-        public IActionResult Forgot3(string password, string passwordvalidate)
+        public IActionResult Forgot3(string password, string passwordvalidate, string emails)
         {
-            return RedirectToAction("Login", "Auth");
+            if(passwordvalidate == password)
+            {
+                _usuario.ForgotEditPassword(emails, password);
+                _usuario.DeleteEditPin(emails);
+                return RedirectToAction("Login", "Auth");
+            }
+            else
+            {
+                return RedirectToAction("Forgot3", "Auth", new { email = emails });
+            }
+            
         }
         [HttpGet]
         public ViewResult SignIn()
@@ -167,6 +215,10 @@ namespace Educa.Controllers
             {
                 ModelState.AddModelError("EmailError", "Email no válido");
             }
+            if (_valido.EmailExist(usuario.EmailTutor))
+            {
+                ModelState.AddModelError("EmailExist", "Email ya registrado");
+            }
             if (usuario.EmailTutor == null)
             {
                 ModelState.AddModelError("EmailVacio", "Email no válido");
@@ -194,6 +246,7 @@ namespace Educa.Controllers
         {
             ViewBag.Nombre = user;
             _repository.RegistroTablasUsuario(user);
+            _repository.RegistroTablasPruebas(user);
             _cookieAuthService.SetHttpContext(HttpContext);
             return View();
         }
@@ -256,7 +309,7 @@ namespace Educa.Controllers
         [HttpGet]
         public IActionResult DatosUsuarios(string dato)
         {
-            _repository.RegistroTablasPruebas(dato);
+            
             _cookieAuthService.SetHttpContext(HttpContext);
             return View();
         }

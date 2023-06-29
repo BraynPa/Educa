@@ -18,8 +18,8 @@ namespace Educa.Repository
         public string PassUsuario(int Id);
         public void EditarUsuario(Usuario usuario, int id);
         public void EditarPassword(int id, string pass1);
-
-
+        public void ForgotEditPassword(string email, string pass1);
+        public void DeleteEditPin(string email);
     }
     public class UsuarioRepository : IUsuarioRepository
     {
@@ -83,6 +83,10 @@ namespace Educa.Repository
         }
         public bool BuscarUsuarioUser(String user)
         {
+            if(user == "AdminEduca")
+            {
+                return true;
+            }
             var Usuario = _context._usuario.FirstOrDefault(o => o.User == user);
             if (Usuario == null)
             {
@@ -97,6 +101,7 @@ namespace Educa.Repository
         public void AgregarUsuario(Usuario usuario)
         {
             usuario.User = usuario.User.Substring(0, 1).ToUpper() + usuario.User.Substring(1).ToLower();
+            usuario.Fecha = DateTime.Now;
             _context._usuario.Add(usuario);
             _context.SaveChanges();
         }
@@ -118,6 +123,20 @@ namespace Educa.Repository
             var usuarioFinal = _context._usuario.FirstOrDefault(o => o.Id == id);
             usuarioFinal.Password = pass1;
             _context._usuario.Update(usuarioFinal);
+            _context.SaveChanges();
+        }
+        public void ForgotEditPassword(string email, string pass1)
+        {
+            var usuarioFinal = _context._usuario.FirstOrDefault(o => o.EmailTutor == email);
+            usuarioFinal.Password = pass1;
+            _context._usuario.Update(usuarioFinal);
+            _context.SaveChanges();
+        }
+        public void DeleteEditPin(string email)
+        {
+            var usuarioFinal = _context._usuario.FirstOrDefault(o => o.EmailTutor == email);
+            var pinRec = _context._recuperarPassword.FirstOrDefault(o => o.IdUsuario == usuarioFinal.Id);
+            _context._recuperarPassword.Remove(pinRec);
             _context.SaveChanges();
         }
     }

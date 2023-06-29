@@ -1,0 +1,2783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZ2CReNEZGkGzROIDnq6joAAAAAACAAAAAAAQZgAAAAEAACAAAABuZQ8tm7j8Rt24C2YZti0YhkHBdtlCGoxIMlOiPemp7gAAAAAOgAAAAAIAACAAAAAJ2Ybov2s7RjTGZ7XLqH525meUowvzuSVcDDqmC3ZPRCAAAABEdlXd8J0EqOSuHW+aKwzcPWHeHaYyWQ4o9PDZui9c6kAAAACIIlBMAuNsP0NLIaqfmuDyzTZUAz2Ev9E5PTG2NPEm1mLb8qNjGnd0KtE5+m/3n/PqaWf1OrxPnHX6M6oliPfY</EncryptedPassword>
+    <_PublishTargetUrl>ftp://198.37.116.26/www.Educa.somee.com</_PublishTargetUrl>
+    <History>False|2023-06-16T12:11:46.4258890Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DevConnection">
+      <Value>workstation id=BDEduca.mssql.somee.com%3bpacket size=4096%3buser id=Educa_SQLLogin_1%3bpwd=9px9ao7ftu%3bdata source=BDEduca.mssql.somee.com%3bpersist security info=False%3binitial catalog=BDEduca</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>06/16/2023 06:22:49</publishTime>
+    </File>
+    <File Include="appsettings.production.json">
+      <publishTime>06/16/2023 06:31:49</publishTime>
+    </File>
+    <File Include="Azure.Core.dll">
+      <publishTime>04/04/2022 16:38:56</publishTime>
+    </File>
+    <File Include="Azure.Identity.dll">
+      <publishTime>04/05/2022 15:26:00</publishTime>
+    </File>
+    <File Include="BouncyCastle.Crypto.dll">
+      <publishTime>10/19/2021 06:53:34</publishTime>
+    </File>
+    <File Include="Educa.deps.json">
+      <publishTime>06/16/2023 06:31:38</publishTime>
+    </File>
+    <File Include="Educa.dll">
+      <publishTime>06/16/2023 06:31:37</publishTime>
+    </File>
+    <File Include="Educa.exe">
+      <publishTime>06/16/2023 06:31:38</publishTime>
+    </File>
+    <File Include="Educa.pdb">
+      <publishTime>06/16/2023 06:31:37</publishTime>
+    </File>
+    <File Include="Educa.runtimeconfig.json">
+      <publishTime>06/16/2023 06:31:39</publishTime>
+    </File>
+    <File Include="MailKit.dll">
+      <publishTime>03/04/2023 15:28:14</publishTime>
+    </File>
+    <File Include="Microsoft.Bcl.AsyncInterfaces.dll">
+      <publishTime>04/14/2020 17:39:12</publishTime>
+    </File>
+    <File Include="Microsoft.Data.SqlClient.dll">
+      <publishTime>10/07/2022 18:35:40</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Abstractions.dll">
+      <publishTime>03/15/2023 13:09:24</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.dll">
+      <publishTime>03/15/2023 13:09:42</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Relational.dll">
+      <publishTime>03/15/2023 13:09:50</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.SqlServer.dll">
+      <publishTime>03/15/2023 13:09:58</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Caching.Abstractions.dll">
+      <publishTime>10/18/2022 11:31:34</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Caching.Memory.dll">
+      <publishTime>10/18/2022 11:31:44</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Configuration.Abstractions.dll">
+      <publishTime>10/18/2022 11:19:14</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+      <publishTime>10/18/2022 11:19:10</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.DependencyInjection.dll">
+      <publishTime>10/18/2022 11:19:34</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Logging.Abstractions.dll">
+      <publishTime>10/18/2022 11:19:52</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Logging.dll">
+      <publishTime>10/18/2022 11:20:18</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Options.dll">
+      <publishTime>10/18/2022 11:19:34</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Primitives.dll">
+      <publishTime>10/18/2022 11:19:10</publishTime>
+    </File>
+    <File Include="Microsoft.Identity.Client.dll">
+      <publishTime>06/22/2022 14:59:58</publishTime>
+    </File>
+    <File Include="Microsoft.Identity.Client.Extensions.Msal.dll">
+      <publishTime>11/19/2021 17:02:00</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Abstractions.dll">
+      <publishTime>07/01/2022 13:47:38</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.JsonWebTokens.dll">
+      <publishTime>07/01/2022 13:25:52</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Logging.dll">
+      <publishTime>07/01/2022 13:27:42</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.dll">
+      <publishTime>07/01/2022 13:29:14</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.OpenIdConnect.dll">
+      <publishTime>07/01/2022 13:39:00</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Tokens.dll">
+      <publishTime>07/01/2022 13:33:46</publishTime>
+    </File>
+    <File Include="Microsoft.SqlServer.Server.dll">
+      <publishTime>01/27/2022 12:19:08</publishTime>
+    </File>
+    <File Include="Microsoft.Win32.SystemEvents.dll">
+      <publishTime>10/19/2020 13:40:26</publishTime>
+    </File>
+    <File Include="MimeKit.dll">
+      <publishTime>03/04/2023 15:13:46</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll">
+      <publishTime>10/19/2020 13:49:58</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll">
+      <publishTime>10/07/2022 18:35:40</publishTime>
+    </File>
+    <File Include="runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>10/03/2022 17:45:42</publishTime>
+    </File>
+    <File Include="runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>10/03/2022 17:45:32</publishTime>
+    </File>
+    <File Include="runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>10/03/2022 17:45:32</publishTime>
+    </File>
+    <File Include="runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>10/03/2022 17:45:32</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll">
+      <publishTime>10/19/2020 13:52:12</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll">
+      <publishTime>10/19/2020 13:53:02</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll">
+      <publishTime>10/19/2020 13:53:36</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll">
+      <publishTime>10/07/2022 18:35:52</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll">
+      <publishTime>10/19/2020 13:52:44</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>10/19/2020 13:49:30</publishTime>
+    </File>
+    <File Include="System.Configuration.ConfigurationManager.dll">
+      <publishTime>10/19/2020 13:52:30</publishTime>
+    </File>
+    <File Include="System.Drawing.Common.dll">
+      <publishTime>10/19/2020 13:50:02</publishTime>
+    </File>
+    <File Include="System.IdentityModel.Tokens.Jwt.dll">
+      <publishTime>07/01/2022 13:23:04</publishTime>
+    </File>
+    <File Include="System.Memory.Data.dll">
+      <publishTime>04/08/2021 11:45:54</publishTime>
+    </File>
+    <File Include="System.Runtime.Caching.dll">
+      <publishTime>10/19/2020 13:52:34</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>10/19/2020 13:52:26</publishTime>
+    </File>
+    <File Include="System.Security.Permissions.dll">
+      <publishTime>10/19/2020 13:52:36</publishTime>
+    </File>
+    <File Include="System.Windows.Extensions.dll">
+      <publishTime>10/19/2020 13:53:38</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>06/16/2023 06:31:49</publishTime>
+    </File>
+    <File Include="wwwroot/css/AvatarUserStyle.css">
+      <publishTime>05/17/2023 17:25:57</publishTime>
+    </File>
+    <File Include="wwwroot/css/CustionarioIStyle.css">
+      <publishTime>05/12/2023 18:47:40</publishTime>
+    </File>
+    <File Include="wwwroot/css/DatosUsuarioStyle.css">
+      <publishTime>05/12/2023 18:38:49</publishTime>
+    </File>
+    <File Include="wwwroot/css/EditStyle.css">
+      <publishTime>06/16/2023 00:00:41</publishTime>
+    </File>
+    <File Include="wwwroot/css/EducaNinjaStyle.css">
+      <publishTime>05/09/2023 19:42:07</publishTime>
+    </File>
+    <File Include="wwwroot/css/Forgot2Style.css">
+      <publishTime>05/02/2023 16:24:35</publishTime>
+    </File>
+    <File Include="wwwroot/css/Forgot3Style.css">
+      <publishTime>05/02/2023 20:44:04</publishTime>
+    </File>
+    <File Include="wwwroot/css/ForgotStyle.css">
+      <publishTime>05/02/2023 16:20:12</publishTime>
+    </File>
+    <File Include="wwwroot/css/HistoriaIndexStyle.css">
+      <publishTime>05/13/2023 12:42:26</publishTime>
+    </File>
+    <File Include="wwwroot/css/HistoriaNp6Style.css">
+      <publishTime>05/13/2023 13:32:50</publishTime>
+    </File>
+    <File Include="wwwroot/css/InfoStyle.css">
+      <publishTime>05/09/2023 21:39:40</publishTime>
+    </File>
+    <File Include="wwwroot/css/landingstyle.css">
+      <publishTime>05/02/2023 15:26:02</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion1Ej1Style.css">
+      <publishTime>05/25/2023 00:19:57</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion1Ej2Style.css">
+      <publishTime>05/25/2023 00:47:15</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion1Ej3Style.css">
+      <publishTime>05/25/2023 01:08:17</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion1Pag1Style.css">
+      <publishTime>05/24/2023 23:37:19</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion1Pag2Style.css">
+      <publishTime>05/24/2023 23:43:00</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion1Pag3Style.css">
+      <publishTime>05/24/2023 23:57:13</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion2Ej1Style.css">
+      <publishTime>05/27/2023 21:58:59</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion2Pag1Style.css">
+      <publishTime>05/26/2023 03:35:34</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion2Pag2Style.css">
+      <publishTime>05/26/2023 18:27:21</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion3Ej1.css">
+      <publishTime>05/29/2023 14:00:17</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion3Ej2Style.css">
+      <publishTime>05/29/2023 14:52:44</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion3Pag1.css">
+      <publishTime>05/28/2023 18:03:00</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion3Pag1Style.css">
+      <publishTime>05/28/2023 18:13:58</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion3Pag2.css">
+      <publishTime>05/28/2023 19:35:36</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion3Pag7Style.css">
+      <publishTime>05/29/2023 00:55:13</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion4Ej1.css">
+      <publishTime>05/30/2023 21:20:46</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion4Ej2Style.css">
+      <publishTime>05/30/2023 18:19:14</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion4Pag1Style.css">
+      <publishTime>05/29/2023 21:57:53</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion4Pag2Style.css">
+      <publishTime>05/29/2023 22:43:39</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion4Pag3Style.css">
+      <publishTime>05/30/2023 15:18:18</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion5Ej1Style.css">
+      <publishTime>05/31/2023 02:05:54</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion5Ej2Style.css">
+      <publishTime>05/31/2023 02:26:40</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion5Pag1Style.css">
+      <publishTime>05/30/2023 23:38:35</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion5Pag2Style.css">
+      <publishTime>05/31/2023 00:45:34</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion6Ej1Style.css">
+      <publishTime>05/31/2023 23:03:01</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion6Pag1Style.css">
+      <publishTime>05/31/2023 22:16:08</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion7Ej1Style.css">
+      <publishTime>06/14/2023 21:26:37</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion7Pag1Style.css">
+      <publishTime>06/12/2023 22:58:46</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion7Pag2Style.css">
+      <publishTime>06/13/2023 20:59:30</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion7Pag3Style.css">
+      <publishTime>06/12/2023 22:57:00</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion7Pag4Style.css">
+      <publishTime>06/14/2023 19:41:49</publishTime>
+    </File>
+    <File Include="wwwroot/css/Leccion7Pag5Style.css">
+      <publishTime>06/14/2023 20:21:58</publishTime>
+    </File>
+    <File Include="wwwroot/css/LoginStyle.css">
+      <publishTime>05/12/2023 07:59:37</publishTime>
+    </File>
+    <File Include="wwwroot/css/LogoutStyle.css">
+      <publishTime>05/17/2023 16:20:00</publishTime>
+    </File>
+    <File Include="wwwroot/css/NotaUsuarioStyle.css">
+      <publishTime>06/02/2023 09:33:38</publishTime>
+    </File>
+    <File Include="wwwroot/css/PreHistoriaStyle.css">
+      <publishTime>05/13/2023 13:59:42</publishTime>
+    </File>
+    <File Include="wwwroot/css/PreIndexStyle.css">
+      <publishTime>05/12/2023 13:44:41</publishTime>
+    </File>
+    <File Include="wwwroot/css/SignInStyle.css">
+      <publishTime>06/15/2023 01:50:31</publishTime>
+    </File>
+    <File Include="wwwroot/css/site.css">
+      <publishTime>05/16/2023 02:01:42</publishTime>
+    </File>
+    <File Include="wwwroot/css/Subtema1Exam1.css">
+      <publishTime>05/31/2023 15:30:54</publishTime>
+    </File>
+    <File Include="wwwroot/css/Subtema1Exam2Style.css">
+      <publishTime>05/31/2023 18:08:53</publishTime>
+    </File>
+    <File Include="wwwroot/css/UserNotFoundStyle.css">
+      <publishTime>06/02/2023 10:01:38</publishTime>
+    </File>
+    <File Include="wwwroot/Documentos/Leccion6Arbol.pdf">
+      <publishTime>05/31/2023 20:42:18</publishTime>
+    </File>
+    <File Include="wwwroot/Educa.styles.css">
+      <publishTime>06/16/2023 06:31:38</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Curso/Exam.png">
+      <publishTime>06/01/2023 20:28:40</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Curso/NextItem.png">
+      <publishTime>05/12/2023 19:59:12</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Home/Avatar1.png">
+      <publishTime>05/17/2023 00:46:12</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Home/Avatar2.png">
+      <publishTime>05/17/2023 00:49:13</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Home/Avatar3.png">
+      <publishTime>05/17/2023 00:51:58</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Home/Avatar4.png">
+      <publishTime>05/17/2023 00:56:11</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Home/Avatar5.png">
+      <publishTime>05/17/2023 00:58:21</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Home/Avatar6.png">
+      <publishTime>05/17/2023 00:59:02</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Home/Desliza.png">
+      <publishTime>05/17/2023 19:11:16</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Home/Logo250x150.png">
+      <publishTime>05/12/2023 13:34:38</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Home/LogoBlack250x150.png">
+      <publishTime>05/24/2023 15:47:31</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Home/LogoIconEduca.png">
+      <publishTime>05/10/2023 01:40:42</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Landing/Ben1.png">
+      <publishTime>04/22/2023 14:37:04</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Landing/Ben2.png">
+      <publishTime>04/22/2023 14:31:13</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Landing/Ben3.png">
+      <publishTime>04/22/2023 14:39:30</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Landing/Ben4.png">
+      <publishTime>04/22/2023 14:44:30</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Landing/Ben5.png">
+      <publishTime>04/22/2023 14:34:21</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Landing/Ben6.png">
+      <publishTime>04/22/2023 14:43:22</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Landing/Car1.png">
+      <publishTime>04/28/2023 09:43:51</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Landing/Car2.png">
+      <publishTime>04/28/2023 09:46:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Landing/Car3.png">
+      <publishTime>04/28/2023 09:48:10</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Landing/Car4.png">
+      <publishTime>04/28/2023 09:52:15</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Landing/Car5.png">
+      <publishTime>04/28/2023 09:54:21</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Landing/Car6.png">
+      <publishTime>04/28/2023 09:56:29</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Landing/Cubes.png">
+      <publishTime>04/21/2023 23:09:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Landing/ObjetivoLandingPage.png">
+      <publishTime>04/22/2023 12:56:35</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Landing/Topic1.png">
+      <publishTime>04/21/2023 23:27:23</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Landing/Topic2.png">
+      <publishTime>04/22/2023 14:01:29</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Landing/Topic3.png">
+      <publishTime>04/22/2023 14:11:43</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Landing/Us.png">
+      <publishTime>04/21/2023 23:32:58</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le1.png">
+      <publishTime>05/10/2023 09:41:08</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le10.png">
+      <publishTime>05/10/2023 14:32:41</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le11.png">
+      <publishTime>05/10/2023 14:35:45</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le12.png">
+      <publishTime>05/10/2023 14:38:50</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le13.png">
+      <publishTime>05/10/2023 14:41:53</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le14.png">
+      <publishTime>05/10/2023 14:44:40</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le15.png">
+      <publishTime>05/10/2023 14:46:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le16.png">
+      <publishTime>05/10/2023 14:45:37</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le17.png">
+      <publishTime>05/10/2023 14:51:05</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le18.png">
+      <publishTime>05/10/2023 14:51:05</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le19.png">
+      <publishTime>05/10/2023 14:51:05</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le2.png">
+      <publishTime>05/10/2023 09:47:45</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le20.png">
+      <publishTime>05/10/2023 14:54:26</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le21.png">
+      <publishTime>05/10/2023 14:55:50</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le22.png">
+      <publishTime>05/10/2023 14:57:06</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le23.png">
+      <publishTime>05/10/2023 14:59:56</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le24.png">
+      <publishTime>05/10/2023 15:01:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le25.png">
+      <publishTime>05/10/2023 14:28:09</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le26.png">
+      <publishTime>05/10/2023 15:04:50</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le27.png">
+      <publishTime>05/10/2023 15:07:30</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le28.png">
+      <publishTime>05/10/2023 15:09:18</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le29.png">
+      <publishTime>05/10/2023 15:09:18</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le3.png">
+      <publishTime>05/10/2023 10:04:34</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le30.png">
+      <publishTime>05/10/2023 15:09:18</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le31.png">
+      <publishTime>05/10/2023 15:36:13</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le32.png">
+      <publishTime>05/10/2023 15:37:21</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le33.png">
+      <publishTime>05/10/2023 15:38:45</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le34.png">
+      <publishTime>05/10/2023 15:40:00</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le35.png">
+      <publishTime>05/10/2023 15:41:28</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le36.png">
+      <publishTime>05/10/2023 15:42:33</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le37.png">
+      <publishTime>05/10/2023 15:43:29</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le38.png">
+      <publishTime>05/10/2023 15:44:19</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le4.png">
+      <publishTime>05/10/2023 10:05:39</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le5.png">
+      <publishTime>05/10/2023 10:07:13</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le6.png">
+      <publishTime>05/10/2023 10:13:18</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le7.png">
+      <publishTime>05/10/2023 14:28:09</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le8.png">
+      <publishTime>05/10/2023 14:30:10</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Le9.png">
+      <publishTime>05/10/2023 14:31:02</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/bloques-numericos.png">
+      <publishTime>05/19/2023 18:26:57</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/cero.png">
+      <publishTime>05/24/2023 10:40:07</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/ceroB.png">
+      <publishTime>05/24/2023 18:46:57</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/CeroPelota.png">
+      <publishTime>05/24/2023 18:10:11</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/cinco.png">
+      <publishTime>05/24/2023 13:18:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/cincoB.png">
+      <publishTime>05/24/2023 18:48:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/CincoPelota.png">
+      <publishTime>05/24/2023 17:00:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/CincoText.png">
+      <publishTime>05/24/2023 17:48:29</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/cuatro.png">
+      <publishTime>05/24/2023 10:43:22</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/cuatroB.png">
+      <publishTime>05/24/2023 18:48:31</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/CuatroPelota.png">
+      <publishTime>05/24/2023 17:00:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/dos.png">
+      <publishTime>05/24/2023 10:43:08</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/dosB.png">
+      <publishTime>05/24/2023 18:48:19</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/DosPelota.png">
+      <publishTime>05/24/2023 17:00:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/EJ2/1.png">
+      <publishTime>05/24/2023 18:46:57</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/EJ2/18.png">
+      <publishTime>05/24/2023 18:36:50</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/EJ2/2.png">
+      <publishTime>05/24/2023 18:48:19</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/EJ2/27.png">
+      <publishTime>05/24/2023 18:36:40</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/EJ2/3.png">
+      <publishTime>05/24/2023 18:48:25</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/EJ2/36.png">
+      <publishTime>05/24/2023 18:36:52</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/EJ2/4.png">
+      <publishTime>05/24/2023 18:48:31</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/EJ2/45.png">
+      <publishTime>05/24/2023 18:36:53</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/EJ2/5.png">
+      <publishTime>05/24/2023 18:48:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/EJ2/54.png">
+      <publishTime>05/24/2023 18:36:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/EJ2/6.png">
+      <publishTime>05/24/2023 18:48:43</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/EJ2/63.png">
+      <publishTime>05/24/2023 18:36:47</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/EJ2/7.png">
+      <publishTime>05/24/2023 18:49:08</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/EJ2/72.png">
+      <publishTime>05/24/2023 18:36:49</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/EJ2/8.png">
+      <publishTime>05/24/2023 18:49:18</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/EJ2/9.png">
+      <publishTime>05/24/2023 18:50:37</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/igual.png">
+      <publishTime>05/24/2023 17:08:13</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/nueve.png">
+      <publishTime>05/24/2023 10:43:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/nueveB.png">
+      <publishTime>05/24/2023 18:49:18</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/NuevePelota.png">
+      <publishTime>05/24/2023 17:00:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/Nuevetext.png">
+      <publishTime>05/24/2023 22:17:22</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/ocho.png">
+      <publishTime>05/24/2023 10:43:47</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/ochoB.png">
+      <publishTime>05/24/2023 18:49:08</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/OchoPelota.png">
+      <publishTime>05/24/2023 17:00:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/seis.png">
+      <publishTime>05/24/2023 13:18:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/seisB.png">
+      <publishTime>05/24/2023 18:48:43</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/SeisPelota.png">
+      <publishTime>05/24/2023 17:00:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/siete.png">
+      <publishTime>05/24/2023 10:43:42</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/sieteB.png">
+      <publishTime>05/24/2023 20:41:02</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/SietePelota.png">
+      <publishTime>05/24/2023 17:00:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/tres.png">
+      <publishTime>05/24/2023 10:43:16</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/tresB.png">
+      <publishTime>05/24/2023 18:48:25</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/TresPelota.png">
+      <publishTime>05/24/2023 17:00:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/uno.png">
+      <publishTime>05/19/2023 18:30:13</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/unoB.png">
+      <publishTime>05/24/2023 20:42:31</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion1/UnoPelota.png">
+      <publishTime>05/24/2023 17:00:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/abeja.png">
+      <publishTime>05/26/2023 03:03:21</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/elefante.png">
+      <publishTime>05/26/2023 03:04:00</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/isla.png">
+      <publishTime>05/26/2023 03:04:26</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/oso.png">
+      <publishTime>05/26/2023 03:04:48</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/aEj1.png">
+      <publishTime>05/27/2023 19:46:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/APalabras.png">
+      <publishTime>05/26/2023 19:42:10</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/carta-a.png">
+      <publishTime>05/26/2023 13:41:26</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/eEj1.png">
+      <publishTime>05/27/2023 19:46:45</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/EPalabras.png">
+      <publishTime>05/26/2023 19:42:10</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/estrella.png">
+      <publishTime>05/27/2023 19:37:38</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/iEj1.png">
+      <publishTime>05/27/2023 19:46:52</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/IPalabras.png">
+      <publishTime>05/26/2023 19:42:10</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/ira.png">
+      <publishTime>05/27/2023 19:38:18</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/letra-e.png">
+      <publishTime>05/26/2023 13:41:39</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/letra-i.png">
+      <publishTime>05/26/2023 13:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/letra-o.png">
+      <publishTime>05/26/2023 13:41:53</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/letra-u.png">
+      <publishTime>05/26/2023 13:41:58</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/luna.png">
+      <publishTime>05/27/2023 19:37:12</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/oEj1.png">
+      <publishTime>05/27/2023 19:46:59</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/ola.png">
+      <publishTime>05/27/2023 19:38:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/OPalabras.png">
+      <publishTime>05/26/2023 16:17:49</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/uEj1.png">
+      <publishTime>05/27/2023 19:47:06</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/Pag2/UPalabras.png">
+      <publishTime>05/26/2023 19:42:10</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion2/uva.png">
+      <publishTime>05/26/2023 03:05:43</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/BPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/CPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/DPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Ej1/esEj1.png">
+      <publishTime>05/29/2023 18:34:18</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Ej1/laEj1.png">
+      <publishTime>05/29/2023 18:34:18</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Ej1/llaEj1.png">
+      <publishTime>05/29/2023 18:34:18</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Ej1/luEj1.png">
+      <publishTime>05/29/2023 18:34:18</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Ej1/raEj1.png">
+      <publishTime>05/29/2023 18:34:18</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/FPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/GPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/HPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/JPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/KPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/LPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/MPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/NPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/bPag1.png">
+      <publishTime>05/28/2023 14:42:41</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/cPag1.png">
+      <publishTime>05/28/2023 14:44:11</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/dPag1.png">
+      <publishTime>05/28/2023 14:44:47</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/fPag1.png">
+      <publishTime>05/28/2023 14:47:08</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/gPag1.png">
+      <publishTime>05/28/2023 14:47:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/hPag1.png">
+      <publishTime>05/28/2023 14:48:29</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/jPag1.png">
+      <publishTime>05/28/2023 14:49:38</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/kPag1.png">
+      <publishTime>05/28/2023 14:50:22</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/lPag1.png">
+      <publishTime>05/28/2023 14:49:18</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/mPag1.png">
+      <publishTime>05/28/2023 14:51:50</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/niuPag1.png">
+      <publishTime>05/28/2023 14:54:50</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/nPag1.png">
+      <publishTime>05/28/2023 14:53:32</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/pPag1.png">
+      <publishTime>05/28/2023 14:58:12</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/qPag1.png">
+      <publishTime>05/28/2023 14:59:27</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/rPag1.png">
+      <publishTime>05/28/2023 14:59:58</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/sPag1.png">
+      <publishTime>05/28/2023 15:00:49</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/tPag1.png">
+      <publishTime>05/28/2023 15:01:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/vPag1.png">
+      <publishTime>05/28/2023 15:03:32</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/wPag1.png">
+      <publishTime>05/28/2023 15:04:37</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/xPag1.png">
+      <publishTime>05/28/2023 15:06:07</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/yPag1.png">
+      <publishTime>05/28/2023 15:08:39</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag1/zPag1.png">
+      <publishTime>05/28/2023 15:18:03</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag10/da.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag10/de.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag10/di.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag10/do.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag10/du.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag11/fa.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag11/fe.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag11/fi.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag11/fo.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag11/fu.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag12/ga.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag12/ge.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag12/gi.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag12/go.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag12/gu.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag13/gude.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag13/gudi.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag13/gue.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag13/gui.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag14/ha.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag14/he.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag14/hi.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag14/ho.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag14/hu.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag15/ja.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag15/je.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag15/ji.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag15/jo.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag15/ju.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag16/ka.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag16/ke.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag16/ki.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag16/ko.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag16/ku.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag17/La.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag17/Le.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag17/Li.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag17/Lo.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag17/Lu.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag18/Lla.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag18/Lle.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag18/Lli.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag18/Llo.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag18/Llu.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag19/ma.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag19/me.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag19/mi.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag19/mo.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag19/mu.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag2/D3.png">
+      <publishTime>05/28/2023 19:01:43</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag2/DPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag2/L3.png">
+      <publishTime>05/28/2023 19:00:08</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag2/LPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag2/M3.png">
+      <publishTime>05/28/2023 19:00:14</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag2/MPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag2/P3.png">
+      <publishTime>05/28/2023 19:01:07</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag2/PPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag2/S3.png">
+      <publishTime>05/28/2023 19:00:44</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag2/SPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag20/na.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag20/ne.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag20/ni.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag20/no.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag20/nu.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag21/nia.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag21/nie.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag21/nii.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag21/nio.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag21/niu.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag22/pa.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag22/pe.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag22/pi.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag22/po.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag22/pu.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag23/que.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag23/qui.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag24/ra.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag24/re.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag24/ri.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag24/ro.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag24/ru.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag25/sa.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag25/se.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag25/si.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag25/so.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag25/su.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag26/ta.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag26/te.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag26/ti.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag26/to.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag26/tu.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag27/va.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag27/ve.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag27/vi.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag27/vo.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag27/vu.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag28/wa.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag28/we.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag28/wi.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag28/wo.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag28/wu.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag29/xa.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag29/xe.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag29/xi.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag29/xo.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag29/xu.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag3/C3.png">
+      <publishTime>05/28/2023 21:27:51</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag3/CPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag3/F3.png">
+      <publishTime>05/28/2023 21:28:04</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag3/FPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag3/N3.png">
+      <publishTime>05/28/2023 21:27:37</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag3/NPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag3/R3.png">
+      <publishTime>05/28/2023 21:28:14</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag3/RPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag3/T3.png">
+      <publishTime>05/28/2023 21:28:20</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag3/TPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag30/ya.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag30/ye.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag30/yi.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag30/yo.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag30/yu.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag31/za.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag31/ze.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag31/zi.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag31/zo.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag31/zu.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag4/B3.png">
+      <publishTime>05/28/2023 21:30:58</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag4/BPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag4/G3.png">
+      <publishTime>05/28/2023 21:31:09</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag4/GPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag4/J3.png">
+      <publishTime>05/28/2023 21:31:37</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag4/JPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag4/Q3.png">
+      <publishTime>05/28/2023 21:31:48</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag4/QPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag4/V3.png">
+      <publishTime>05/28/2023 21:32:01</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag4/VPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag5/H3.png">
+      <publishTime>05/28/2023 21:47:09</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag5/HPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag5/K3.png">
+      <publishTime>05/28/2023 21:48:06</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag5/KPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag5/Nie3.png">
+      <publishTime>05/28/2023 21:45:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag5/NiePalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag5/Y3.png">
+      <publishTime>05/28/2023 22:16:37</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag5/YPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag5/Z3.png">
+      <publishTime>05/28/2023 21:48:38</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag5/ZPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag6/W3.png">
+      <publishTime>05/28/2023 21:50:01</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag6/WPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag6/X3.png">
+      <publishTime>05/28/2023 21:50:22</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag6/XPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag7/ba.png">
+      <publishTime>05/29/2023 05:48:04</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag7/be.png">
+      <publishTime>05/29/2023 05:48:04</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag7/bi.png">
+      <publishTime>05/29/2023 05:48:04</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag7/bo.png">
+      <publishTime>05/29/2023 05:48:04</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag7/bu.png">
+      <publishTime>05/29/2023 05:48:04</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag8/ca.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag8/ce.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag8/ci.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag8/co.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag8/cu.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag9/cha.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag9/che.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag9/chi.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag9/cho.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/Pag9/chu.png">
+      <publishTime>05/29/2023 06:52:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/PPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/QPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/RPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/SPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/TPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/VPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/WPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/XPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/YPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/ZPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion3/ÑPalabra.png">
+      <publishTime>05/28/2023 07:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion4/Pag1/Img1M.png">
+      <publishTime>05/29/2023 21:21:02</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion4/Pag2/Img1M.png">
+      <publishTime>05/29/2023 22:33:46</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion5/Ej1/C.png">
+      <publishTime>05/31/2023 01:52:05</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion5/Ej1/C1.png">
+      <publishTime>05/31/2023 01:51:23</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion5/Ej1/L.png">
+      <publishTime>05/31/2023 01:52:00</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion5/Ej1/L1.png">
+      <publishTime>05/31/2023 01:51:11</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion5/Ej1/M.png">
+      <publishTime>05/31/2023 01:53:38</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion5/Ej1/M1.png">
+      <publishTime>05/31/2023 01:53:48</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion5/Ej2/C.png">
+      <publishTime>05/31/2023 01:52:05</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion5/Ej2/C1.png">
+      <publishTime>05/31/2023 01:51:23</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion5/Ej2/I.png">
+      <publishTime>05/31/2023 02:13:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion5/Ej2/I1.png">
+      <publishTime>05/31/2023 02:12:47</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion5/Pag1/Img1M.png">
+      <publishTime>05/30/2023 22:58:06</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion5/Pag2/Img1M.png">
+      <publishTime>05/31/2023 01:18:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion6/Ej1/Ej1.png">
+      <publishTime>05/31/2023 23:10:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion6/Pag1/Leccion6.png">
+      <publishTime>05/31/2023 21:36:31</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Ej1/1.png">
+      <publishTime>06/15/2023 02:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Ej1/2.png">
+      <publishTime>06/15/2023 02:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Ej1/3.png">
+      <publishTime>06/15/2023 02:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Ej1/4.png">
+      <publishTime>06/15/2023 02:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Ej1/5.png">
+      <publishTime>06/15/2023 02:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Pag1/Img1M.png">
+      <publishTime>06/12/2023 17:26:00</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Pag2/Img1.jpg">
+      <publishTime>06/12/2023 19:34:03</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Pag2/Img2.jpg">
+      <publishTime>05/10/2022 02:55:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Pag3/canguro.png">
+      <publishTime>06/12/2023 22:40:57</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Pag3/colibri.png">
+      <publishTime>06/12/2023 22:27:08</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Pag3/foca.png">
+      <publishTime>06/12/2023 22:33:02</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Pag3/Img1M.png">
+      <publishTime>06/12/2023 23:06:03</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Pag3/leopardo.png">
+      <publishTime>06/12/2023 22:58:01</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Pag3/pastor-aleman.png">
+      <publishTime>06/12/2023 22:22:02</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Pag3/serpiente.png">
+      <publishTime>06/12/2023 22:10:08</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Pag4/Img1.png">
+      <publishTime>06/14/2023 18:56:34</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Pag4/Img2.png">
+      <publishTime>06/14/2023 19:30:32</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Pag4/Img3.png">
+      <publishTime>06/14/2023 19:43:32</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Pag5/escamas.png">
+      <publishTime>06/14/2023 20:17:03</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Pag5/mascota.png">
+      <publishTime>06/14/2023 20:18:23</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Pag5/oveja.png">
+      <publishTime>06/14/2023 20:19:37</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Leccion7/Pag5/pluma.png">
+      <publishTime>06/14/2023 20:15:29</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema1/Exam1/1.png">
+      <publishTime>05/31/2023 20:04:34</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema1/Exam1/10.png">
+      <publishTime>05/31/2023 15:36:17</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema1/Exam1/2.png">
+      <publishTime>05/31/2023 20:04:34</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema1/Exam1/3.png">
+      <publishTime>05/31/2023 20:04:34</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema1/Exam1/4.png">
+      <publishTime>05/31/2023 20:04:34</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema1/Exam1/5.png">
+      <publishTime>05/31/2023 20:04:34</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema1/Exam1/6.png">
+      <publishTime>05/31/2023 20:04:34</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema1/Exam1/7.png">
+      <publishTime>05/31/2023 20:04:34</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema1/Exam1/8.png">
+      <publishTime>05/31/2023 20:04:34</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema1/Exam1/9.png">
+      <publishTime>05/31/2023 20:04:34</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema2/Exam1/1.png">
+      <publishTime>05/31/2023 20:27:21</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema2/Exam1/10.png">
+      <publishTime>06/01/2023 01:11:04</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema2/Exam1/2.png">
+      <publishTime>06/01/2023 01:11:04</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema2/Exam1/3.png">
+      <publishTime>06/01/2023 01:11:04</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema2/Exam1/4.png">
+      <publishTime>06/01/2023 01:11:04</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema2/Exam1/5.png">
+      <publishTime>06/01/2023 01:11:04</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema2/Exam1/6.png">
+      <publishTime>06/01/2023 01:11:04</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema2/Exam1/7.png">
+      <publishTime>06/01/2023 01:11:04</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema2/Exam1/8.png">
+      <publishTime>06/01/2023 01:11:04</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Leccion/Subtema2/Exam1/9.png">
+      <publishTime>06/01/2023 01:11:04</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia1/H1Fin.png">
+      <publishTime>05/09/2023 02:38:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia1/H1Pag1.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia1/H1Pag1Img.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia1/H1Pag2.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia1/H1Pag2Img.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia1/H1Pag3.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia1/H1Pag3Img.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia1/H1Pag4.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia1/H1Pag4Img.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia1/H1Pag5.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia1/H1Pag5Img.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia1/H1Pag6.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia1/H1Pag6Img.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia1/PortadaH1.png">
+      <publishTime>05/09/2023 02:38:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia2/H2Fin.png">
+      <publishTime>05/09/2023 02:38:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia2/H2Pag1.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia2/H2Pag1Img.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia2/H2Pag2.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia2/H2Pag2Img.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia2/H2Pag3.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia2/H2Pag3Img.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia2/H2Pag4.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia2/H2Pag4Img.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia2/H2Pag5.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia2/H2Pag5Img.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia2/H2Pag6.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia2/H2Pag6Img.png">
+      <publishTime>05/08/2023 22:28:54</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia2/PortadaH2.png">
+      <publishTime>05/09/2023 00:55:38</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia3/H3Fin.png">
+      <publishTime>05/09/2023 02:38:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia3/H3Pag1.png">
+      <publishTime>05/09/2023 00:55:38</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia3/H3Pag1Img.png">
+      <publishTime>05/09/2023 00:55:38</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia3/H3Pag2.png">
+      <publishTime>05/09/2023 00:55:38</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia3/H3Pag2Img.png">
+      <publishTime>05/09/2023 00:55:38</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia3/H3Pag3.png">
+      <publishTime>05/09/2023 00:55:38</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia3/H3Pag3Img.png">
+      <publishTime>05/09/2023 00:55:38</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia3/H3Pag4.png">
+      <publishTime>05/09/2023 00:55:38</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia3/H3Pag4Img.png">
+      <publishTime>05/09/2023 00:55:38</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia3/H3Pag5.png">
+      <publishTime>05/08/2023 20:07:27</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia3/H3Pag5Img.png">
+      <publishTime>05/09/2023 00:55:38</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia3/PortadaH3.png">
+      <publishTime>05/09/2023 00:55:38</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia4/H4Fin.png">
+      <publishTime>05/09/2023 02:38:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia4/H4Pag1.png">
+      <publishTime>05/09/2023 02:38:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia4/H4Pag1Img.png">
+      <publishTime>05/09/2023 02:38:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia4/H4Pag2.png">
+      <publishTime>05/09/2023 02:38:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia4/H4Pag2Img.png">
+      <publishTime>05/09/2023 02:38:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia4/H4Pag3.png">
+      <publishTime>05/09/2023 02:38:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia4/H4Pag3Img.png">
+      <publishTime>05/09/2023 02:38:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia4/H4Pag4.png">
+      <publishTime>05/09/2023 02:38:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia4/H4Pag4Img.png">
+      <publishTime>05/09/2023 02:38:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia4/H4Pag5.png">
+      <publishTime>05/09/2023 03:02:12</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia4/H4Pag5Img.png">
+      <publishTime>05/09/2023 02:38:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Subtema/HistoriasSencillas/Historia4/PortadaH4.png">
+      <publishTime>05/09/2023 02:38:24</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Tema/Tema1.png">
+      <publishTime>05/12/2023 17:09:21</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Tema/Tema2.png">
+      <publishTime>05/12/2023 17:10:23</publishTime>
+    </File>
+    <File Include="wwwroot/Images/Tema/Tema3.png">
+      <publishTime>05/12/2023 17:11:10</publishTime>
+    </File>
+    <File Include="wwwroot/js/AlertLoginScript.js">
+      <publishTime>05/12/2023 09:01:34</publishTime>
+    </File>
+    <File Include="wwwroot/js/AvatarUsuarioScript.js">
+      <publishTime>05/17/2023 19:03:51</publishTime>
+    </File>
+    <File Include="wwwroot/js/CuestionarioIGuestionsScript.js">
+      <publishTime>05/05/2023 08:19:46</publishTime>
+    </File>
+    <File Include="wwwroot/js/CuestionarioIScript.js">
+      <publishTime>05/12/2023 11:11:25</publishTime>
+    </File>
+    <File Include="wwwroot/js/DatosUsuarioScript.js">
+      <publishTime>05/12/2023 18:41:14</publishTime>
+    </File>
+    <File Include="wwwroot/js/EditPopUpScript.js">
+      <publishTime>06/15/2023 21:07:45</publishTime>
+    </File>
+    <File Include="wwwroot/js/EducaNinjaScript.js">
+      <publishTime>05/09/2023 19:14:26</publishTime>
+    </File>
+    <File Include="wwwroot/js/Forgot3Script.js">
+      <publishTime>05/02/2023 20:44:20</publishTime>
+    </File>
+    <File Include="wwwroot/js/ForgotScript.js">
+      <publishTime>05/02/2023 16:21:38</publishTime>
+    </File>
+    <File Include="wwwroot/js/HistoriaNp6Script.js">
+      <publishTime>05/13/2023 13:35:21</publishTime>
+    </File>
+    <File Include="wwwroot/js/InfoScript.js">
+      <publishTime>05/09/2023 22:10:47</publishTime>
+    </File>
+    <File Include="wwwroot/js/LandindScript.js">
+      <publishTime>05/02/2023 15:26:35</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion1Ej1Script.js">
+      <publishTime>05/25/2023 00:43:56</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion1Ej2Script.js">
+      <publishTime>05/25/2023 01:03:22</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion1Ej3Script.js">
+      <publishTime>05/29/2023 16:24:03</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion1Pag1Script.js">
+      <publishTime>05/24/2023 23:17:35</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion1Pag2Script.js">
+      <publishTime>05/24/2023 23:47:13</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion1Pag3Script.js">
+      <publishTime>05/25/2023 00:02:40</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion2Ej1Script.js">
+      <publishTime>05/29/2023 16:36:23</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion2Pag1Script.js">
+      <publishTime>05/26/2023 03:40:00</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion2Pag2Script.js">
+      <publishTime>05/26/2023 18:30:07</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Ej1Script.js">
+      <publishTime>05/29/2023 18:48:10</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Ej2Script.js">
+      <publishTime>05/29/2023 19:04:53</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Ej3Script.js">
+      <publishTime>05/29/2023 19:18:49</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Ej4Script.js">
+      <publishTime>05/29/2023 19:23:21</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Ej5Script.js">
+      <publishTime>05/29/2023 19:24:05</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Ej6Script.js">
+      <publishTime>05/29/2023 19:28:07</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag10Script.js">
+      <publishTime>05/29/2023 17:47:07</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag11Script.js">
+      <publishTime>05/29/2023 17:46:31</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag12Script.js">
+      <publishTime>05/29/2023 17:48:03</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag13Script.js">
+      <publishTime>05/29/2023 18:35:30</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag14Script.js">
+      <publishTime>05/29/2023 17:59:35</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag15Script.js">
+      <publishTime>05/29/2023 17:58:55</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag16Script.js">
+      <publishTime>05/29/2023 17:58:22</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag17Script.js">
+      <publishTime>05/29/2023 17:57:53</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag18Script.js">
+      <publishTime>05/29/2023 17:57:17</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag19Script.js">
+      <publishTime>05/29/2023 17:56:43</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag1Script.js">
+      <publishTime>05/29/2023 15:54:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag20Script.js">
+      <publishTime>05/29/2023 17:56:08</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag21Script.js">
+      <publishTime>05/29/2023 17:55:30</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag22Script.js">
+      <publishTime>05/29/2023 17:54:39</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag23Script.js">
+      <publishTime>05/29/2023 18:42:24</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag24Script.js">
+      <publishTime>05/29/2023 17:53:29</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag25Script.js">
+      <publishTime>05/29/2023 17:52:51</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag26Script.js">
+      <publishTime>05/29/2023 17:52:07</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag27Script.js">
+      <publishTime>05/29/2023 17:51:24</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag28Script.js">
+      <publishTime>05/29/2023 17:50:43</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag29Script.js">
+      <publishTime>05/29/2023 17:50:02</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag2Script.js">
+      <publishTime>05/29/2023 16:12:23</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag30Script.js">
+      <publishTime>05/29/2023 17:49:24</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag31Script.js">
+      <publishTime>05/29/2023 18:24:36</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag3Script.js">
+      <publishTime>05/29/2023 16:12:55</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag4Script.js">
+      <publishTime>05/29/2023 16:14:36</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag5Script.js">
+      <publishTime>05/29/2023 16:14:47</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag6Script.js">
+      <publishTime>05/29/2023 16:15:00</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag7Script.js">
+      <publishTime>05/29/2023 17:38:58</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag8Script.js">
+      <publishTime>05/29/2023 17:44:36</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion3Pag9Script.js">
+      <publishTime>05/29/2023 17:45:35</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion4Ej1Data.js">
+      <publishTime>05/30/2023 19:56:29</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion4Ej1Script.js">
+      <publishTime>05/30/2023 21:50:19</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion4Ej2Script.js">
+      <publishTime>05/30/2023 21:52:57</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion4Pag1Script.js">
+      <publishTime>05/30/2023 21:37:43</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion4Pag2Script.js">
+      <publishTime>05/30/2023 21:39:43</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion4Pag3Script.js">
+      <publishTime>05/30/2023 21:43:00</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion5Ej1Script.js">
+      <publishTime>05/31/2023 02:45:50</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion5Ej2Script.js">
+      <publishTime>05/31/2023 02:39:29</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion5Pag1Script.js">
+      <publishTime>05/31/2023 02:29:19</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion5Pag2Script.js">
+      <publishTime>05/31/2023 02:44:51</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion6Ej1Data.js">
+      <publishTime>05/31/2023 23:15:53</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion6Ej1Script.js">
+      <publishTime>06/01/2023 00:03:09</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion6Pag1Script.js">
+      <publishTime>05/31/2023 22:28:20</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion7Ej1Data.js">
+      <publishTime>06/14/2023 21:32:08</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion7Ej1Script.js">
+      <publishTime>06/14/2023 21:33:16</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion7Pag1Script.js">
+      <publishTime>06/14/2023 21:30:02</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion7Pag2Script.js">
+      <publishTime>06/14/2023 21:30:15</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion7Pag3Script.js">
+      <publishTime>06/14/2023 21:30:20</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion7Pag4Script.js">
+      <publishTime>06/14/2023 21:30:26</publishTime>
+    </File>
+    <File Include="wwwroot/js/Leccion7Pag5Script.js">
+      <publishTime>06/14/2023 21:30:33</publishTime>
+    </File>
+    <File Include="wwwroot/js/LoginScript.js">
+      <publishTime>05/02/2023 15:51:01</publishTime>
+    </File>
+    <File Include="wwwroot/js/LogoutScript.js">
+      <publishTime>05/17/2023 16:31:22</publishTime>
+    </File>
+    <File Include="wwwroot/js/site.js">
+      <publishTime>05/02/2023 15:09:41</publishTime>
+    </File>
+    <File Include="wwwroot/js/Subtema1Exam1Data.js">
+      <publishTime>05/31/2023 15:52:57</publishTime>
+    </File>
+    <File Include="wwwroot/js/Subtema1Exam1Script.js">
+      <publishTime>05/31/2023 23:59:51</publishTime>
+    </File>
+    <File Include="wwwroot/js/Subtema1Exam2Script.js">
+      <publishTime>05/31/2023 18:17:33</publishTime>
+    </File>
+    <File Include="wwwroot/js/Subtema2Exam1Data.js">
+      <publishTime>05/31/2023 20:16:55</publishTime>
+    </File>
+    <File Include="wwwroot/js/Subtema2Exam1Script.js">
+      <publishTime>06/01/2023 00:02:13</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.js">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.js.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.min.js">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/LICENSE">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.js">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.min.js">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.js">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.min.js">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/LICENSE.md">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.js">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.js">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.map">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/LICENSE.txt">
+      <publishTime>05/02/2023 13:06:50</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/click.wav">
+      <publishTime>05/02/2023 00:13:02</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/FinishQuestion.wav">
+      <publishTime>05/30/2023 20:20:09</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/BienHecho.wav">
+      <publishTime>05/24/2023 17:55:37</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/BuenIntento.wav">
+      <publishTime>05/24/2023 17:56:29</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/cero.wav">
+      <publishTime>05/24/2023 10:57:20</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/cinco.wav">
+      <publishTime>05/24/2023 11:00:10</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/cuatro.wav">
+      <publishTime>05/24/2023 10:59:14</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/dos.wav">
+      <publishTime>05/24/2023 10:58:43</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/errorpag1.wav">
+      <publishTime>05/24/2023 11:07:26</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/Leccion1Ej1Intro.wav">
+      <publishTime>05/24/2023 17:51:37</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/Leccion1Ej2Intro.wav">
+      <publishTime>05/24/2023 18:58:15</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/Leccion1Ej3Intro.wav">
+      <publishTime>05/24/2023 21:59:18</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/Leccion1Intro.wav">
+      <publishTime>05/23/2023 22:27:23</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/Leccion1Pag1.wav">
+      <publishTime>05/23/2023 22:27:23</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/Leccion1Pag2Intro.wav">
+      <publishTime>05/24/2023 11:15:41</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/Leccion1Pag3Intro.wav">
+      <publishTime>05/24/2023 12:44:47</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/nueve.wav">
+      <publishTime>05/24/2023 11:01:35</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/ocho.wav">
+      <publishTime>05/24/2023 11:01:14</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/seis.wav">
+      <publishTime>05/24/2023 10:59:42</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/siete.wav">
+      <publishTime>05/24/2023 12:59:49</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/tres.wav">
+      <publishTime>05/24/2023 10:58:58</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion1/uno.wav">
+      <publishTime>05/24/2023 10:57:58</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion2/Leccion2Ej1Intro.wav">
+      <publishTime>05/27/2023 20:26:34</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion2/Leccion2Pag1Intro.wav">
+      <publishTime>05/26/2023 03:20:02</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion2/Leccion2Pag2Intro.wav">
+      <publishTime>05/26/2023 15:25:06</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion2/VocalCa.wav">
+      <publishTime>05/26/2023 15:49:34</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion2/VocalCe.wav">
+      <publishTime>05/26/2023 16:10:58</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion2/VocalCi.wav">
+      <publishTime>05/26/2023 16:08:36</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion2/VocalCo.wav">
+      <publishTime>05/26/2023 16:21:07</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion2/VocalCu.wav">
+      <publishTime>05/26/2023 16:13:26</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Ej1/Leccion3Ej1Intro.wav">
+      <publishTime>05/29/2023 13:41:36</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Leccion3Pag1Intro.wav">
+      <publishTime>05/28/2023 17:37:09</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag10/da.wav">
+      <publishTime>05/29/2023 11:01:26</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag10/de.wav">
+      <publishTime>05/29/2023 11:01:40</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag10/di.wav">
+      <publishTime>05/29/2023 11:01:51</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag10/do.wav">
+      <publishTime>05/29/2023 11:02:40</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag10/du.wav">
+      <publishTime>05/29/2023 11:02:13</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag11/fa.wav">
+      <publishTime>05/29/2023 11:07:00</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag11/fe.wav">
+      <publishTime>05/29/2023 11:07:12</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag11/fi.wav">
+      <publishTime>05/29/2023 11:07:18</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag11/fo.wav">
+      <publishTime>05/29/2023 11:07:25</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag11/fu.wav">
+      <publishTime>05/29/2023 11:07:31</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag12/ga.wav">
+      <publishTime>05/29/2023 11:13:56</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag12/ge.wav">
+      <publishTime>05/29/2023 11:12:45</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag12/gi.wav">
+      <publishTime>05/29/2023 11:13:05</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag12/go.wav">
+      <publishTime>05/29/2023 11:14:16</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag12/gu.wav">
+      <publishTime>05/29/2023 11:15:46</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag13/gude.wav">
+      <publishTime>05/29/2023 11:31:02</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag13/gudi.wav">
+      <publishTime>05/29/2023 11:29:30</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag13/gue.wav">
+      <publishTime>05/29/2023 11:28:29</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag13/gui.wav">
+      <publishTime>05/29/2023 11:25:00</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag14/ha.wav">
+      <publishTime>05/29/2023 11:37:43</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag14/he.wav">
+      <publishTime>05/29/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag14/hi.wav">
+      <publishTime>05/29/2023 11:44:19</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag14/ho.wav">
+      <publishTime>05/29/2023 11:40:29</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag14/hu.wav">
+      <publishTime>05/29/2023 11:42:13</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag15/ja.wav">
+      <publishTime>05/29/2023 11:45:23</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag15/je.wav">
+      <publishTime>05/29/2023 11:50:23</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag15/ji.wav">
+      <publishTime>05/29/2023 11:45:41</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag15/jo.wav">
+      <publishTime>05/29/2023 11:45:48</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag15/ju.wav">
+      <publishTime>05/29/2023 11:51:11</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag16/ka.wav">
+      <publishTime>05/29/2023 11:53:08</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag16/ke.wav">
+      <publishTime>05/29/2023 11:53:17</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag16/ki.wav">
+      <publishTime>05/29/2023 11:53:36</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag16/ko.wav">
+      <publishTime>05/29/2023 12:03:45</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag16/ku.wav">
+      <publishTime>05/29/2023 11:54:03</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag17/la.wav">
+      <publishTime>05/29/2023 12:04:57</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag17/le.wav">
+      <publishTime>05/29/2023 12:05:05</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag17/li.wav">
+      <publishTime>05/29/2023 12:06:09</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag17/lo.wav">
+      <publishTime>05/29/2023 12:05:54</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag17/lu.wav">
+      <publishTime>05/29/2023 12:05:36</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag18/lla.wav">
+      <publishTime>05/29/2023 12:08:40</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag18/lle.wav">
+      <publishTime>05/29/2023 12:08:51</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag18/lli.wav">
+      <publishTime>05/29/2023 12:09:03</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag18/llo.wav">
+      <publishTime>05/29/2023 12:09:31</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag18/llu.wav">
+      <publishTime>05/29/2023 12:09:51</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag19/ma.wav">
+      <publishTime>05/29/2023 12:13:27</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag19/me.wav">
+      <publishTime>05/29/2023 12:13:35</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag19/mi.wav">
+      <publishTime>05/29/2023 12:13:42</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag19/mo.wav">
+      <publishTime>05/29/2023 12:13:49</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag19/mu.wav">
+      <publishTime>05/29/2023 12:13:56</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag2/Leccion3Pag2D.wav">
+      <publishTime>05/28/2023 21:21:35</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag2/Leccion3Pag2Intro.wav">
+      <publishTime>05/28/2023 20:58:49</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag2/Leccion3Pag2L.wav">
+      <publishTime>05/28/2023 21:14:41</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag2/Leccion3Pag2M.wav">
+      <publishTime>05/28/2023 21:16:41</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag2/Leccion3Pag2P.wav">
+      <publishTime>05/28/2023 21:19:06</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag2/Leccion3Pag2S.wav">
+      <publishTime>05/28/2023 21:18:13</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag20/na.wav">
+      <publishTime>05/29/2023 12:18:43</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag20/ne.wav">
+      <publishTime>05/29/2023 12:20:05</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag20/ni.wav">
+      <publishTime>05/29/2023 12:19:02</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag20/no.wav">
+      <publishTime>05/29/2023 12:19:11</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag20/nu.wav">
+      <publishTime>05/29/2023 12:19:17</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag21/nia.wav">
+      <publishTime>05/29/2023 12:21:28</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag21/nie.wav">
+      <publishTime>05/29/2023 12:21:38</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag21/nii.wav">
+      <publishTime>05/29/2023 12:21:48</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag21/nio.wav">
+      <publishTime>05/29/2023 12:22:04</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag21/niu.wav">
+      <publishTime>05/29/2023 12:22:13</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag22/pa.wav">
+      <publishTime>05/29/2023 12:24:48</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag22/pe.wav">
+      <publishTime>05/29/2023 12:24:56</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag22/pi.wav">
+      <publishTime>05/29/2023 12:25:04</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag22/po.wav">
+      <publishTime>05/29/2023 12:25:13</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag22/pu.wav">
+      <publishTime>05/29/2023 12:25:26</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag23/que.wav">
+      <publishTime>05/29/2023 11:53:17</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag23/qui.wav">
+      <publishTime>05/29/2023 11:53:36</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag24/ra.wav">
+      <publishTime>05/29/2023 12:30:43</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag24/re.wav">
+      <publishTime>05/29/2023 12:30:48</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag24/ri.wav">
+      <publishTime>05/29/2023 12:31:08</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag24/ro.wav">
+      <publishTime>05/29/2023 12:31:13</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag24/ru.wav">
+      <publishTime>05/29/2023 12:31:56</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag25/sa.wav">
+      <publishTime>05/29/2023 12:34:47</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag25/se.wav">
+      <publishTime>05/29/2023 12:34:53</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag25/si.wav">
+      <publishTime>05/29/2023 12:34:59</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag25/so.wav">
+      <publishTime>05/29/2023 12:35:07</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag25/su.wav">
+      <publishTime>05/29/2023 12:35:19</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag26/ta.wav">
+      <publishTime>05/29/2023 12:37:21</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag26/te.wav">
+      <publishTime>05/29/2023 12:37:30</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag26/ti.wav">
+      <publishTime>05/29/2023 12:37:36</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag26/to.wav">
+      <publishTime>05/29/2023 12:37:43</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag26/tu.wav">
+      <publishTime>05/29/2023 12:37:51</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag27/va.wav">
+      <publishTime>05/29/2023 00:49:55</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag27/ve.wav">
+      <publishTime>05/29/2023 00:50:50</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag27/vi.wav">
+      <publishTime>05/29/2023 00:58:37</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag27/vo.wav">
+      <publishTime>05/29/2023 00:51:08</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag27/vu.wav">
+      <publishTime>05/29/2023 00:52:31</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag28/wa.wav">
+      <publishTime>05/29/2023 12:43:27</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag28/we.wav">
+      <publishTime>05/29/2023 11:31:02</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag28/wi.wav">
+      <publishTime>05/29/2023 11:29:30</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag28/wo.wav">
+      <publishTime>05/29/2023 12:43:47</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag28/wu.wav">
+      <publishTime>05/29/2023 12:43:54</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag29/xa.wav">
+      <publishTime>05/29/2023 12:48:31</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag29/xe.wav">
+      <publishTime>05/29/2023 12:48:48</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag29/xi.wav">
+      <publishTime>05/29/2023 12:52:18</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag29/xo.wav">
+      <publishTime>05/29/2023 12:49:30</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag29/xu.wav">
+      <publishTime>05/29/2023 12:49:41</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag3/Leccion3Pag3C.wav">
+      <publishTime>05/28/2023 21:54:27</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag3/Leccion3Pag3F.wav">
+      <publishTime>05/28/2023 21:55:19</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag3/Leccion3Pag3N.wav">
+      <publishTime>05/28/2023 22:48:30</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag3/Leccion3Pag3R.wav">
+      <publishTime>05/28/2023 21:57:40</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag3/Leccion3Pag3T.wav">
+      <publishTime>05/28/2023 21:58:37</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag30/ya.wav">
+      <publishTime>05/29/2023 12:08:40</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag30/ye.wav">
+      <publishTime>05/29/2023 12:08:51</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag30/yi.wav">
+      <publishTime>05/29/2023 12:09:03</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag30/yo.wav">
+      <publishTime>05/29/2023 12:09:31</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag30/yu.wav">
+      <publishTime>05/29/2023 12:09:51</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag31/za.wav">
+      <publishTime>05/29/2023 13:01:52</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag31/ze.wav">
+      <publishTime>05/29/2023 12:55:27</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag31/zi.wav">
+      <publishTime>05/29/2023 13:02:08</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag31/zo.wav">
+      <publishTime>05/29/2023 13:02:38</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag31/zu.wav">
+      <publishTime>05/29/2023 12:56:10</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag4/Leccion3Pag4B.wav">
+      <publishTime>05/28/2023 22:59:26</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag4/Leccion3Pag4G.wav">
+      <publishTime>05/28/2023 22:01:10</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag4/Leccion3Pag4J.wav">
+      <publishTime>05/28/2023 22:02:38</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag4/Leccion3Pag4Q.wav">
+      <publishTime>05/28/2023 23:01:31</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag4/Leccion3Pag4V.wav">
+      <publishTime>05/28/2023 22:07:40</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag5/Leccion3Pag5H.wav">
+      <publishTime>05/28/2023 22:09:54</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag5/Leccion3Pag5K.wav">
+      <publishTime>05/28/2023 22:12:38</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag5/Leccion3Pag5Nie.wav">
+      <publishTime>05/28/2023 22:13:54</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag5/Leccion3Pag5Y.wav">
+      <publishTime>05/28/2023 22:16:12</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag5/Leccion3Pag5Z.wav">
+      <publishTime>05/28/2023 22:19:09</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag6/Leccion3Pag6Intro.wav">
+      <publishTime>05/28/2023 22:26:56</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag6/Leccion3Pag6W.wav">
+      <publishTime>05/28/2023 22:22:36</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag6/Leccion3Pag6X.wav">
+      <publishTime>05/28/2023 22:24:11</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag7/ba.wav">
+      <publishTime>05/29/2023 00:49:55</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag7/be.wav">
+      <publishTime>05/29/2023 00:50:50</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag7/bi.wav">
+      <publishTime>05/29/2023 00:58:37</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag7/bo.wav">
+      <publishTime>05/29/2023 00:51:08</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag7/bu.wav">
+      <publishTime>05/29/2023 00:52:31</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag8/ca.wav">
+      <publishTime>05/29/2023 10:50:42</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag8/ce.wav">
+      <publishTime>05/29/2023 10:55:28</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag8/ci.wav">
+      <publishTime>05/29/2023 10:51:51</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag8/co.wav">
+      <publishTime>05/29/2023 10:54:05</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag8/cu.wav">
+      <publishTime>05/29/2023 10:53:21</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag9/cha.wav">
+      <publishTime>05/29/2023 10:57:38</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag9/che.wav">
+      <publishTime>05/29/2023 10:57:47</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag9/chi.wav">
+      <publishTime>05/29/2023 10:57:58</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag9/cho.wav">
+      <publishTime>05/29/2023 10:58:10</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion3/Pag9/chu.wav">
+      <publishTime>05/29/2023 10:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion4/Ej1/Leccion4Ej1P1.wav">
+      <publishTime>05/30/2023 19:58:08</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion4/Ej1/Leccion4Ej1P2.wav">
+      <publishTime>05/30/2023 19:58:28</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion4/Ej1/Leccion4Ej1P3.wav">
+      <publishTime>05/30/2023 19:59:08</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion4/Ej1/Leccion4Ej1P4.wav">
+      <publishTime>05/30/2023 20:04:10</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion4/Ej1/Leccion4Ej1P5.wav">
+      <publishTime>05/30/2023 20:04:33</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion4/Ej2/Leccion4Ej2Intro.wav">
+      <publishTime>05/30/2023 17:13:23</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion4/Pag1/Leccion4Pag1Intro.wav">
+      <publishTime>05/29/2023 20:33:57</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion4/Pag3/Leccion4Pag3DP.wav">
+      <publishTime>05/30/2023 00:57:09</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Leccion6/Ej1/1.wav">
+      <publishTime>05/31/2023 23:13:50</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/lose.wav">
+      <publishTime>05/02/2023 00:08:04</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/Registro.wav">
+      <publishTime>04/26/2023 23:27:21</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/right.wav">
+      <publishTime>05/02/2023 00:11:22</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/win.wav">
+      <publishTime>05/02/2023 00:14:11</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/win2.wav">
+      <publishTime>05/30/2023 20:16:31</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/wrong.wav">
+      <publishTime>05/02/2023 00:12:23</publishTime>
+    </File>
+    <File Include="wwwroot/sounds/wrong2.wav">
+      <publishTime>05/30/2023 20:18:13</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

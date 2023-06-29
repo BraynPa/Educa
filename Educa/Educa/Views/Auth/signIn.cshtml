@@ -50,6 +50,7 @@ var usuario = (Usuario)Model;}
                     </div>
                     @Html.ValidationMessage("UsernameE")
                     @Html.ValidationMessage("UserVacio")
+
                     <div class="input-container">
                         <input type="password" id="input" name="password" required="" >
                         <label for="input" class="label">Contraseña</label>
@@ -69,6 +70,8 @@ var usuario = (Usuario)Model;}
                         <label for="input" class="label">Correo electrónico</label>
                         <div class="underline"></div>
                     </div>
+                    @Html.ValidationMessage("EmailExist")
+                    
                     <div class="input-container">
                         <input type="text" id="input" value="@usuario.CelularTutor" name="CelularTutor" required="">
                         <label for="input" class="label">Celular</label>

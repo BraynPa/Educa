@@ -15,6 +15,54 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\2023-1\Capstone\Codigo\Educa\Educa
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Admin/AdminIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Admin/CuestionarioAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3Vlc3Rpb25hcmlvQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Admin/CuestionarioPreguntasAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3Vlc3Rpb25hcmlvUHJlZ3VudGFzQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Admin/CursoAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3Vyc29BZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Admin/EjercicioAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWplcmNpY2lvQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Admin/ExamAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRXhhbUFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Admin/GradoAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR3JhZG9BZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Admin/LeccionAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGVjY2lvbkFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Admin/LibroAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlicm9BZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Admin/PagLeccionAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGFnTGVjY2lvbkFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Admin/SubtemaAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU3VidGVtYUFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Admin/TemaAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVGVtYUFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Auth/AvatarUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxBdmF0YXJVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -101,6 +149,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Home/NotasUsuario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3Rhc1VzdWFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Home/PageBeta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYWdlQmV0YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Home/PreIndex.cshtml]
@@ -369,6 +421,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Paginas/Leccion7Pag5.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnaW5hc1xMZWNjaW9uN1BhZzUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Paginas/Leccion8Pag1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnaW5hc1xMZWNjaW9uOFBhZzEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/2023-1/Capstone/Codigo/Educa/Educa/Views/Paginas/Subtema1Exam1.cshtml]
